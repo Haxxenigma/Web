@@ -1,0 +1,60 @@
+<%- include('header') -%>
+<main class='main'>
+    <div class='innerMain'>
+        <div class='navBtns'>
+            <a href='/blog'>Cancel</a>
+        </div>
+        <form method='post' action='/article/create' enctype='multipart/form-data' class='form'>
+            <div class='formInput'>
+                <label for='title' class="requiredLable">Title:</label>
+                <input type='text' id='title' name='title' required autofocus autocomplete='off'>
+            </div>
+            <div class='formInput'>
+                <label for='thumbnail'>Article thumbnail:</label>
+                <input type='file' id='thumbnail' name='thumbnail' accept='image/*'>
+            </div>
+            <div class='formInput'>
+                <p class="label"></p>
+                <div class='contentCnt' id="contentCnt">
+                    <div class='contentBtns'>
+                        <div class='contentBtn' id='addHeading'><img src='/media/heading.svg'>
+                            <span class="tooltip">Heading</span>
+                        </div>
+                        <div class='contentBtn' id='addBold'><img src='/media/bold.svg'>
+                            <span class="tooltip">Bold</span>
+                        </div>
+                        <div class='contentBtn' id='addItalic'><img src='/media/italic.svg'>
+                            <span class="tooltip">Italic</span>
+                        </div>
+                        <div class='contentBtn' id='addUnderline'><img src='/media/underline.svg'>
+                            <span class="tooltip">Underline</span>
+                        </div>
+                        <div class='contentBtn' id='addCross'><img src='/media/cross.svg'>
+                            <span class="tooltip">Strikethrough</span>
+                        </div>
+                        <div class='contentBtn' id='addCode'><img src='/media/code.svg'>
+                            <span class="tooltip">Code block</span>
+                        </div>
+                        <div class='contentBtn' id='addWarning'><img src='/media/warning.svg'>
+                            <span class="tooltip">Warning block</span>
+                        </div>
+                        <div class='contentBtn' id='addTip'><img src='/media/tip.svg'>
+                            <span class="tooltip">Tips block</span>
+                        </div>
+                        <div class='contentBtn' id='addLink'><img src='/media/link.svg'>
+                            <span class="tooltip">Link</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='formInput'>
+                <label for='content' class="requiredLable">Content:</label>
+                <textarea id='content' name='content' cols='80' rows='15' required autocomplete='off'></textarea>
+            </div>
+            <div class='formInput'>
+                <button type='submit'>Create</button>
+            </div>
+        </form>
+    </div>
+</main>
+<%- include('footer') -%>

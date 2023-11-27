@@ -1,0 +1,112 @@
+.gallery {
+    width: 100%;
+    margin-top: 60px;
+    transition: filter 0.5s;
+}
+
+.gallery.navExpanded {
+    -webkit-filter: blur(2px) grayscale(1);
+    filter: blur(2px) grayscale(1);
+    pointer-events: none
+}
+
+.gallery .innerGallery {
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    user-select: none;
+}
+
+.gallery .innerGallery .galleryItem {
+    width: 300px;
+    max-height: 150px;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.gallery .innerGallery .galleryItem .posterCtr {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery .innerGallery .galleryItem .posterCtr .poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery .innerGallery .galleryItem .posterCtr .poster>img {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.gallery .innerGallery .galleryItem .posterFtr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 70%);
+}
+
+.gallery .innerGallery .galleryItem .posterFtr .info {
+    padding: 3px;
+    -webkit-filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+}
+
+.gallery .innerGallery .galleryItem .posterFtr .info::after {
+    content: "";
+    width: 30px;
+    height: 15px;
+    display: inline-block;
+    background-image: url('../res/arrow.svg');
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallery .innerGallery .galleryItem:hover .posterCtr .poster>img {
+    transform: scale(1.1);
+}
+
+.gallery .innerGallery .galleryItem:hover .posterFtr .info::after {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .gallery .innerGallery {
+        justify-content: center !important;
+    }
+
+    .modal #modalCtr {
+        width: 100% !important;
+    }
+
+    .modal #closeModal {
+        right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+    .gallery .innerGallery .galleryItem {
+        width: 500px !important;
+        max-height: 250px !important;
+        height: auto !important;
+    }
+
+    .gallery .innerGallery .galleryItem .posterFtr .info {
+        padding: 10px !important;
+    }
+}

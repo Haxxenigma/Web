@@ -1,0 +1,133 @@
+.header {
+    height: 60px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 200px;
+    right: 200px;
+    z-index: 1000;
+    background-color: #000000b1;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 1px 1px #ffffff24;
+}
+
+@media (max-width: 1200px) {
+    .header {
+        left: 0;
+        right: 0;
+    }
+}
+
+.header-left {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header li {
+    width: 125px;
+    height: 60px;
+    margin: 0 30px;
+    list-style: none;
+}
+
+.header a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.header a:hover {
+    background-color: #0095ff;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.header a:active {
+    background-color: #005998;
+    transition: 0.1s;
+}
+
+/*active*/
+.header .active {
+    background-color: #0095ff;
+    border-radius: 3px;
+}
+
+/*arrow-symbol*/
+.arrow-symbol {
+    position: relative;
+    left: 4px;
+    transform: scale(1.4) rotate(270deg);
+    transition: transform 0.3s;
+}
+
+.header-dropdown:hover .arrow-symbol {
+    left: 8px;
+    transform: scale(1.4) rotate(90deg);
+}
+
+/*dropdown*/
+.header-dropdown {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-list {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000b1;
+    backdrop-filter: blur(5px);
+    top: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-list li {
+    margin: 1px 0;
+    border-left: solid 5px #0095ff;
+}
+
+.dropdown-list li:hover {
+    border-left: solid 5px #00c3ff;
+}
+
+.header-dropdown:hover .dropdown-list {
+    display: flex;
+}
+
+/*scrollbar*/
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #b2b2b2;
+}

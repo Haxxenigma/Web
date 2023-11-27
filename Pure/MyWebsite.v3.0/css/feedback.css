@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../res/background.jpg') no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+a {
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #00e1ff;
+}
+
+a:active {
+    color: #0095ff;
+    transition: none;
+}
+
+/*main*/
+.main {
+    min-height: 700px;
+    position: relative;
+    margin: 60px 200px 0;
+    padding: 20px;
+    background-color: #000000b1;
+}
+
+@media (max-width: 1200px) {
+    .main {
+        margin: 60px 0 0;
+    }
+}
+
+/*form*/
+.feedback-header h2 {
+    position: relative;
+    margin: 0;
+    padding: 50px 10px 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.input {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: solid 1px #00e1ff;
+    margin-bottom: 15px;
+    line-height: 1.4em;
+}
+
+.input:hover {
+    outline: solid 2px #00e1ff;
+}
+
+.input:focus {
+    outline: solid 2px #fff;
+}
+
+.form #message {
+    resize: none;
+}
+
+.form #submit {
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    outline: solid 1px #00e1ff;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.form #submit:hover,
+.form #submit:focus {
+    outline: solid 2px #00e1ff;
+}
+
+.form #submit:active {
+    outline: solid 2px #fff;
+}
+
+.form #submit::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    display: block;
+    top: 10px;
+    left: 35px;
+    background-image: url('../res/submit-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(0.40);
+    transition: 0.1s;
+}
+
+.form #submit::after {
+    content: "Submit";
+    position: absolute;
+    top: 11px;
+    left: 60px;
+    font-size: 15px;
+    color: #00e1ff;
+    filter: invert(0.40);
+    transition: 0.1s;
+}
+
+.form #submit:hover::after,
+.form #submit:hover::before {
+    filter: invert(0);
+    color: #00e1ff;
+}
+
+.form #submit:active::after,
+.form #submit:active::before {
+    filter: brightness(0) invert(1);
+    color: #ffffff;
+}
+
+.form #message::-webkit-scrollbar {
+    width: 7px;
+}
+
+.form #message::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.form #message::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #ffffff;
+}

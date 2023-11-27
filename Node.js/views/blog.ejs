@@ -1,0 +1,48 @@
+<%- include('header') -%>
+<main class='main'>
+    <div class='innerMain'>
+        <div class='navBtns'>
+            <a href='/article/create' data-anchor="create">Create an article</a>
+        </div>
+        <div class='articles'>
+            <% if (articles.length > 0) { %>
+            <% articles.forEach(article => { %>
+            <div class='articleCard'>
+                <a href='/article/<%= article.id %>' class='innerArticleCard'>
+                    <div class='articleThumbnail'>
+                        <% if (article.thumbnail) { %>
+                        <img src='/uploads/<%= article.thumbnail %>'>
+                        <% } else { %>
+                        <img src='/media/thumbnail.svg'>
+                        <% } %>
+                    </div>
+                </a>
+                <div class='articleDate'>
+                    <%= article.created_at %>
+                </div>
+                <a href='/users/<%= article.author %>' class='articleAuthor'>
+                    <div class='articleAuthorImage'>
+                        <% if (article.author_image) { %>
+                        <img src='/uploads/<%= article.author_image %>'>
+                        <% } else { %>
+                        <img src='/media/profile.svg'>
+                        <% } %>
+                    </div><%= article.author %>
+                </a>
+                <div class="articleCntCnt">
+                    <div class='articleTitle'>
+                        <%= article.title %>
+                    </div>
+                    <div class='articleCnt'>
+                        <%- article.content %>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+            <% } else { %>
+            <p>There are no articles yet</p>
+            <% } %>
+        </div>
+    </div>
+</main>
+<%- include('footer') -%>

@@ -1,0 +1,39 @@
+{% extends 'blog/base.html' %}
+{% block title %}Log In{% endblock %}
+{% block content %}
+<div class="cnt_btns">
+    <a href="/">Back</a>
+    <div>
+        For the first time with us?
+        <a href="../register">Register</a>
+    </div>
+</div>
+<div class="cnt_h">
+    <h1>Log In</h1>
+</div>
+<div class="cnt login">
+    <form method="post" class="form">
+        {% csrf_token %}
+        <div class="form_input">
+            <label for="id_username">Username:</label>
+            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username"
+                maxlength="150" required id="id_username" />
+        </div>
+        <div class="form_input">
+            <label for="id_password">Password:</label>
+            <input type="password" name="password" autocomplete="current-password" required id="id_password" />
+        </div>
+        <div class="form_btns">
+            <button type="submit">Log In</button>
+        </div>
+        {% if error_message %}
+        <div class="alerts">
+            <strong>Error:</strong>
+            <ul>
+                <li>{{ error_message }}</li>
+            </ul>
+        </div>
+        {% endif %}
+    </form>
+</div>
+{% endblock %}

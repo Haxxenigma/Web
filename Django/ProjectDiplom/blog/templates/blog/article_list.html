@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %}
+{% block title %}List of articles{% endblock %}
+{% load static %}
+{% block content %}
+<div class="cnt_btns">
+    <a href="/article/create/" title="Create">Create</a>
+</div>
+<div class="cnt_h">
+    <h1>List of articles</h1>
+</div>
+<div class="cnt article_list">
+    {% for article in articles %}
+    <div class="article">
+        <a href="{% url 'article_detail' article.pk %}" title="{{ article.title }}" class="article_link">
+            <div class="article_title">{{ article.title }}</div>
+            <div class="article_preview">
+                <img src="{% if article.preview %}{{ article.preview.url }}{% else %}{% static 'blog/media/preview.jpg' %}{% endif %}"
+                    alt="preview">
+            </div>
+        </a>
+        <div class="article_date">{{ article.created_at }}</div>
+        <a href="/{{ article.author }}" title="{{ article.author }}" class="article_author">
+            <div class="author_avatar">
+                <img src="{% if article.author.avatar %}{{ article.author.avatar.url }}{% else %}{% static 'blog/media/avatar.svg' %}{% endif %}"
+                    alt="avatar" />
+            </div>{{ article.author }}
+        </a>
+        <div class="article_cnt">{{ article.md_content | truncatewords:2 | safe }}</div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

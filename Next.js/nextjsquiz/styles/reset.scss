@@ -1,0 +1,89 @@
+@import 'variables';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $bg;
+    color: $fg;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 105%;
+    line-height: 1.6;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+div,
+span,
+p,
+a,
+img,
+form,
+input,
+button,
+textarea,
+select,
+ul,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    list-style: none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: $bg;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $bg;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $mid;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $mid-75;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: $fg;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: $bg;
+}
+
+::-moz-selection {
+    background-color: $fg;
+    color: $fg;
+}
+
+::selection {
+    background-color: $fg;
+    color: $bg;
+}

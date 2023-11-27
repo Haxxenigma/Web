@@ -1,0 +1,49 @@
+@mixin transition($time, $timing: ease) {
+    -webkit-transition: $time $timing all;
+    -moz-transition: $time $timing all;
+    -ms-transition: $time $timing all;
+    -o-transition: $time $timing all;
+    transition: $time $timing all;
+}
+
+@mixin user-select-none() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@mixin backdrop-blur($blur) {
+    -webkit-backdrop-filter: blur($blur);
+    backdrop-filter: blur($blur);
+}
+
+@mixin drop-shadow($z, $color) {
+    -webkit-filter: drop-shadow(0 0 $z $color);
+    -ms-filter: drop-shadow(0 0 $z $color);
+    filter: drop-shadow(0 0 $z $color);
+}
+
+@mixin flexible($x: center, $y: center) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin my-btn($color) {
+    @include transition(150ms);
+    @include flexible();
+    width: max-content;
+    gap: 5px;
+    padding: 5px 15px;
+    box-shadow: inset 0 0 5px $color;
+    border-radius: 8px;
+
+    &:hover {
+        @include drop-shadow(5px, $color)
+    }
+
+    &:active {
+        @include transition(0s);
+        @include drop-shadow(10px, $color)
+    }
+}

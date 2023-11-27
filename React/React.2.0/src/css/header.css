@@ -1,0 +1,97 @@
+.header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    z-index: 100;
+}
+
+.header .nav {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.header .nav #logo {
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+}
+
+.header .nav #logo:before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    display: block;
+    background: url('../res/logo.jpg') center no-repeat;
+    background-size: contain;
+}
+
+.header .nav .navLink {
+    text-align: center;
+    margin: 0 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.header .nav .navLink:hover {
+    color: rgb(180, 180, 180);
+    transition: 0s;
+}
+
+.header .nav .navLink.active {
+    color: rgb(0, 255, 255);
+}
+
+.header .nav .navToggleCtr {
+    display: none;
+    cursor: pointer;
+}
+
+.header .nav .navToggleCtr .navToggleBtn {
+    width: 30px;
+    height: 3px;
+    margin: 7px 0;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.header .nav .navToggleCtr:hover .navToggleBtn {
+    background-color: rgb(180, 180, 180);
+}
+
+.header .nav .navToggleCtr.navExpanded .btn1 {
+    transform: translateY(10px) rotate(-45deg);
+}
+
+.header .nav .navToggleCtr.navExpanded .btn2 {
+    opacity: 0;
+}
+
+.header .nav .navToggleCtr.navExpanded .btn3 {
+    transform: translateY(-10px) rotate(45deg);
+}
+
+@media screen and (max-width: 1000px) {
+    .header .nav .navLink {
+        display: none;
+    }
+
+    .header .nav .navToggleCtr {
+        display: block;
+    }
+}

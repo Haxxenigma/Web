@@ -1,0 +1,89 @@
+<%- include('header') -%>
+<main class='main'>
+    <div class='innerMain'>
+        <div class='adminWrapper'>
+            <div class='adminMenu'>
+                <div class='adminTitleCnt'>
+                    <div class="adminTitle">
+                        <h3>Available tables</h3>
+                        <img src="/media/db.svg">
+                    </div>
+                </div>
+                <% tables.forEach(table => { %>
+                <button type='button' data-table='<%= table %>'><%= table %></button>
+                <% }); %>
+            </div>
+            <div class='adminMenuToggle'>
+                <img src='/media/arrow2.svg'>
+            </div>
+            <div class='adminCnt'>
+                <div class='adminTitleCnt'>
+                    <div class="adminTitle">
+                        <h3>Entries in the table</h3>
+                        <img src="/media/list.svg">
+                    </div>
+                    <div class='adminCntCreate'>
+                        <a href='' id="adminCntCreateBtn">Create +</a>
+                    </div>
+                </div>
+                <div class='tableRows users'>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Birth Date</th>
+                                <th>Created at</th>
+                                <th>Updated at</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% users.forEach(user => { %>
+                            <tr>
+                                <td><%= user.id %></td>
+                                <td><a href='/users/<%= user.name %>/edit'><%= user.name %></a></td>
+                                <td><%= user.email %></td>
+                                <td><%= user.birth_date %></td>
+                                <td><%= user.created_at %></td>
+                                <td><%= user.updated_at %></td>
+                            </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+                <div class='tableRows articles'>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Created at</th>
+                                <th>Updated at</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (articles.length > 0) { %>
+                            <% articles.forEach(article => { %>
+                            <tr>
+                                <td><%= article.id %></td>
+                                <td><a href='/article/<%= article.id %>/edit'><%= article.title %></a></td>
+                                <td><a href='/users/<%= article.author %>'><%= article.author %></a></td>
+                                <td><%= article.created_at %></td>
+                                <td><%= article.updated_at %></td>
+                            </tr>
+                            <% }); %>
+                            <% } else { %>
+                            <tr>
+                                <td>There are no articles yet</td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<%- include('footer') -%>

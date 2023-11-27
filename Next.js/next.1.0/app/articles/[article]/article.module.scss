@@ -1,0 +1,68 @@
+@import 'variables';
+@import 'mixins';
+
+.article_btns {
+    display: flex;
+    gap: 20px;
+
+    a:nth-child(2) {
+        @include my-btn($primary-color);
+    }
+
+    a:nth-child(3) {
+        @include my-btn($tertiary-color);
+    }
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.article_header {
+    display: flex;
+    gap: 20px;
+}
+
+.article_title {
+    font-size: 200%;
+    margin: 10px 0;
+}
+
+.article_date {
+    color: $mid-75;
+    cursor: default;
+}
+
+.article_author,
+.article_date {
+    @include transition(200ms);
+    display: flex;
+    gap: 10px;
+    padding: 5px 10px;
+    background-color: $clear-2;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: $clear-4;
+    }
+
+    &:active {
+        @include transition(0s);
+        background-color: $clear-6;
+    }
+}
+
+.article_author_img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.article_content {
+    padding: 0 15px;
+}

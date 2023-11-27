@@ -1,0 +1,103 @@
+.main {
+    max-width: var(--main-width);
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.main .tableCtr {
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+    overflow: auto;
+}
+
+.main .tableCtr .table {
+    width: 100%;
+    display: table;
+}
+
+.main .tableCtr .table * {
+    line-height: 2;
+    transition: 0.3s;
+}
+
+.main .tableCtr .table .row {
+    display: table-row;
+}
+
+.main .tableCtr .table .row .cell {
+    display: table-cell;
+    padding: 0 20px;
+    border: 1px solid var(--color-primary-full);
+}
+
+.main .tableCtr .table .row:nth-child(1) {
+    position: sticky;
+    top: 0;
+    background: var(--color-primary-full);
+    cursor: pointer;
+}
+
+.main .tableCtr .table .row:nth-child(1) .cell {
+    position: relative;
+}
+
+.main .tableCtr .table .row:nth-child(1) .cell:hover {
+    background: var(--hover);
+    transition: 0s;
+}
+
+.main .tableCtr .table .row:nth-child(1) .cell:active {
+    background: var(--active);
+    transition: 0s;
+}
+
+.main .tableCtr .table .row:nth-child(1) .cell:after {
+    content: url('../images/sort-up.svg');
+    position: absolute;
+    right: 0;
+    top: 4px;
+    opacity: 0.5;
+}
+
+.main .tableCtr .table .row:nth-child(1) .cell:before {
+    content: url('../images/sort-down.svg');
+    position: absolute;
+    right: 0;
+    top: 4px;
+    opacity: 0.5;
+}
+
+.main .tableCtr .table .row:nth-child(1) .cell[data-sort-direction='asc']:after {
+    opacity: 1;
+}
+
+.main .tableCtr .table .row:nth-child(1) .cell[data-sort-direction='desc']:before {
+    opacity: 1;
+}
+
+.main .tableCtr .table .row:nth-child(odd):not(:nth-child(1)) {
+    background: var(--color-primary-clearer);
+}
+
+.main .tableCtr .table .row:hover:not(:nth-child(1)) {
+    background: var(--color-primary-clear);
+    transition: 0s;
+}
+
+.main .tableCtr .table .row:not(:nth-child(1)) .cell:nth-child(2) {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main .tableCtr .table .row:not(:nth-child(1)) .cell:nth-child(2):hover {
+    background: var(--hover);
+    text-decoration: none;
+    transition: 0s;
+}
+
+.main .tableCtr .table .row:not(:nth-child(1)) .cell:nth-child(2):active {
+    background: var(--active);
+    transition: 0s;
+}

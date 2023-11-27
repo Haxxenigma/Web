@@ -1,0 +1,207 @@
+@import 'vars';
+@import 'mixins';
+
+.form {
+    @include flex(flex-start, flex-start, row, wrap, 30px);
+    padding: 20px;
+}
+
+.formTitle {
+    @include select-none();
+    flex-basis: 100%;
+
+    h1 {
+        font-size: 24px;
+        font-weight: normal;
+        border-bottom: 1px solid $fg;
+    }
+}
+
+.formFieldWrapper {
+    @include flex(flex-start, flex-start, $gap: 10px);
+    flex-basis: 100%;
+
+    .formLabel {
+        @include select-none();
+        flex-basis: 25%;
+        color: $mid-75;
+        text-align: right;
+        transition: 0.2s;
+        order: -1;
+        line-height: 2.2;
+    }
+
+    .formInput,
+    .formTextarea {
+        flex-basis: 40%;
+        padding: 4px 8px;
+        background-color: $fg-1;
+        border-radius: 4px;
+        transition: 0.2s;
+
+        &:focus {
+            box-shadow: 0 0 5px $primary;
+
+            &~.formLabel {
+                color: $primary;
+            }
+        }
+    }
+
+    .formTextarea {
+        resize: none;
+    }
+
+    input[type='file'] {
+        display: none;
+    }
+
+    .formUpload {
+        @include flex();
+        position: relative;
+        margin-bottom: 30px;
+
+        .uploadImage {
+            @include flex();
+            min-width: 100px;
+            min-height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .dropwdownWrapper {
+            position: absolute;
+            top: 75%;
+            left: 0;
+
+            .dropdownBtn {
+                @include flex();
+                width: 75px;
+                height: 30px;
+                background-color: $bg-9;
+                box-shadow: inset 0 0 30px $fg-2;
+                border: 1px solid $fg-5;
+                border-radius: 8px;
+                transition: 0.2s;
+
+                &:hover {
+                    box-shadow: inset 0 0 30px $fg-3;
+                }
+
+                &:active {
+                    transition: 0s;
+                    box-shadow: inset 0 0 30px $fg-4;
+                }
+            }
+
+            .dropdown {
+                @include flex($dir: column);
+                position: absolute;
+                top: 110%;
+                background-color: $bg-9;
+                box-shadow: inset 0 0 50px $fg-2;
+                border-radius: 8px;
+                transition: 0.1s;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                overflow: hidden;
+                z-index: 1;
+
+                button {
+                    width: 100%;
+                    padding: 5px 30px;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: $fg-1;
+                    }
+
+                    &:active {
+                        transition: 0s;
+                        background-color: $fg-2;
+                    }
+                }
+
+                &.show {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+}
+
+.formSubmitWrapper {
+    @include flex(flex-start, flex-start, $gap: 10px);
+    flex-basis: 100%;
+
+    .formLabel {
+        flex-basis: 25%;
+        order: -1;
+    }
+
+    .formSubmitBtnCnt {
+        position: relative;
+
+        button {
+            @include flex($gap: 8px);
+            @include btn();
+            @include ripples();
+            width: 150px;
+            height: 35px;
+
+            >* {
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .formFieldWrapper {
+        .formLabel {
+            flex-basis: 20%;
+        }
+
+        .formInput,
+        .formTextarea {
+            flex-basis: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .formFieldWrapper {
+        .formLabel {
+            flex-basis: 20%;
+        }
+
+        .formInput,
+        .formTextarea {
+            flex-basis: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .form {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .formFieldWrapper,
+    .formSubmitWrapper {
+        flex-direction: column;
+
+        .formLabel {
+            flex-basis: auto;
+        }
+
+        .formInput,
+        .formTextarea {
+            flex-basis: auto;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 200px;
+    background-color: #000000b1;
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        margin: 0;
+    }
+}
+
+.footer ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer img {
+    width: 40px;
+    height: 40px;
+    padding: 0 5px;
+    filter: invert(0.40);
+    transition: 0.5s;
+}
+
+.footer img:hover {
+    filter: invert(0);
+}
+
+.footer img:active {
+    filter: invert(0.5);
+    transition: 0.1s;
+}
+
+.footer hr {
+    display: block;
+    margin: 20px auto;
+}

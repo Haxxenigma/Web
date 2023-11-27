@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/136870545?v=4">
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Script -->
+    <script src="./js/index.js" defer></script>
+    <script src="./js/header-color.js" defer></script>
+    <script src="./js/checkauth.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <ul class="header-left">
+            <li><a href="index.html" class="header-elements" id="main">Main</a></li>
+            <li><a href="feedback.html" class="header-elements" id="feedback">Feedback</a></li>
+        </ul>
+        <ul class="header-right">
+            <li class="header-dropdown">
+                <a href="" class="header-elements" id="">Other
+                    <div class="arrow-symbol">&#8250;</div>
+                </a>
+                <ul class="dropdown-list">
+                    <li><a href="" class="dropdown-elements" id=""></a></li>
+                    <li><a href="" class="dropdown-elements" id=""></a></li>
+                    <li><a href="" class="dropdown-elements" id=""></a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <main class="main">
+        <div class="p-header">
+            <div class="avatar">
+                <img alt="avatar" src="https://avatars.githubusercontent.com/u/136870545?v=4">
+            </div>
+            <div class="info">
+                <p>Username</p>
+            </div>
+            <div class="tools">
+                <div class="tool" id="tool-2">
+                    <a href="feedback.html"><img src="./res/feedback-icon.svg" alt="give feedback"></a>
+                    <div class="tool-info">Give Feedback</div>
+                </div>
+            </div>
+            <div id="dropdown">
+                <button type="button" id="dropdown-btn" onclick="toggleDropdown()">More
+                    <div id="arrow-symbol">&#8250;</div>
+                </button>
+                <div id="dropdown-content">
+                    <div>
+                        <div class="scrollable-header">
+                            <h3>Something</h3>
+                        </div>
+                        <div class="scrollable-imgs" onmouseenter="enableScroll()" onmouseleave="disableScroll()">
+                            <div class="scrollable-img">
+                                <img src="" alt="">
+                                <div class="scrollable-caption">Caption</div>
+                            </div>
+                            <div class="scrollable-img">
+                                <img src="" alt="">
+                                <div class="scrollable-caption">Caption</div>
+                            </div>
+                            <div class="scrollable-img">
+                                <img src="" alt="">
+                                <div class="scrollable-caption">Caption</div>
+                            </div>
+                            <div class="scrollable-img">
+                                <img src="" alt="">
+                                <div class="scrollable-caption">Caption</div>
+                            </div>
+                            <div class="scrollable-img">
+                                <img src="" alt="">
+                                <div class="scrollable-caption">Caption</div>
+                            </div>
+                            <div class="scrollable-img">
+                                <img src="" alt="">
+                                <div class="scrollable-caption">Caption</div>
+                            </div>
+                            <div class="scrollable-img">
+                                <img src="" alt="">
+                                <div class="scrollable-caption">Caption</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-content">
+            
+        </div>
+        <div class="p-footer">
+
+        </div>
+    </main>
+    <footer class="footer">
+        <div>
+            <ul>
+                <li>
+                    <a href="https://shikimori.me/" target="_blank">
+                        <img src="./res/shikimori-icon.svg" alt="shikimori">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/" target="_blank">
+                        <img src="./res/github-icon.svg" alt="github">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="./res/facebook-icon.svg" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="./res/linkedin-icon.svg" alt="linkedin">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <hr>
+            <p>&copy; 2023 &middot; Username</p>
+        </div>
+    </footer>
+</body>
+
+</html>

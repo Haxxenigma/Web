@@ -1,0 +1,87 @@
+.form {
+    margin-top: 50px;
+}
+
+.form h2 {
+    font-size: large;
+}
+
+.form .input-container {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin: 40px 0;
+}
+
+.form .input {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0 0 10px;
+    background: var(--main-bg);
+    color: #fff;
+    box-shadow: 1px 1px 15px #000;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.form i {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-style: normal;
+    text-shadow: 2px 2px 3px #000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.form .input:focus~i,
+.form .input:valid~i {
+    font-size: 15px;
+    color: var(--act-text-color);
+    transform: translateY(-100%);
+}
+
+.form .submit {
+    width: 150px;
+    height: 40px;
+    background: var(--main-bg);
+    color: var(--text-color);
+    box-shadow: 1px 1px 15px #000;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.form .submit:hover {
+    background: var(--act-text-color);
+    transform: translateY(-2px);
+    transition: 0.2s;
+}
+
+.form .submit:active {
+    background: var(--bg);
+    transform: translateY(0px);
+    transition: 0s;
+}
+
+.form .submit p {
+    position: absolute;
+    top: 7px;
+    left: 60px;
+}
+
+.form .submit::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    background: url('../res/submit.svg') no-repeat center;
+    background-size: contain;
+}

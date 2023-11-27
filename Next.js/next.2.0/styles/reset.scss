@@ -1,0 +1,59 @@
+@import 'vars';
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    font-style: none;
+    font-size: 16px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: inherit;
+}
+
+body {
+    background-color: $bg;
+    color: $fg;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $bg;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $mid-25;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: $mid;
+    }
+
+    &:active {
+        background-color: $mid-75;
+    }
+}
+
+::-webkit-scrollbar-corner {
+    background-color: $bg;
+}
+
+::selection {
+    background-color: transparent;
+    color: $mid;
+}

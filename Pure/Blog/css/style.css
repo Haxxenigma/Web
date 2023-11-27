@@ -1,0 +1,501 @@
+:root {
+    --clear: hsla(0, 0%, 0%, 0.0);
+    --clear-1: hsla(0, 0%, 0%, 0.1);
+    --clear-2: hsla(0, 0%, 0%, 0.2);
+    --clear-3: hsla(0, 0%, 0%, 0.3);
+    --clear-4: hsla(0, 0%, 0%, 0.4);
+    --clear-5: hsla(0, 0%, 0%, 0.5);
+    --clear-6: hsla(0, 0%, 0%, 0.6);
+    --clear-7: hsla(0, 0%, 0%, 0.7);
+    --clear-8: hsla(0, 0%, 0%, 0.8);
+    --clear-9: hsla(0, 0%, 0%, 0.9);
+
+    --bg: hsla(204, 16%, 13%, 0.933);
+    --bg-17: hsla(204, 16%, 17%, 0.933);
+    --bg-25: hsla(204, 16%, 25%, 0.9);
+    --bg-35: hsla(204, 16%, 35%, 0.9);
+
+    --mid: #808080;
+    --mid-75: #bfbfbf;
+
+    --fg: #ffffff;
+    --fg-1: hsla(0, 0%, 100%, 0.1);
+    --fg-2: hsla(0, 0%, 100%, 0.2);
+    --fg-3: hsla(0, 0%, 100%, 0.3);
+    --fg-4: hsla(0, 0%, 100%, 0.4);
+    --fg-5: hsla(0, 0%, 100%, 0.5);
+    --fg-6: hsla(0, 0%, 100%, 0.6);
+    --fg-7: hsla(0, 0%, 100%, 0.7);
+    --fg-8: hsla(0, 0%, 100%, 0.8);
+    --fg-9: hsla(0, 0%, 100%, 0.9);
+
+    --gray: #1a1a1a;
+    --gray-1: hsla(0, 0%, 10%, 0.1);
+    --gray-2: hsla(0, 0%, 10%, 0.2);
+    --gray-3: hsla(0, 0%, 10%, 0.3);
+    --gray-4: hsla(0, 0%, 10%, 0.4);
+    --gray-5: hsla(0, 0%, 10%, 0.5);
+    --gray-6: hsla(0, 0%, 10%, 0.6);
+    --gray-7: hsla(0, 0%, 10%, 0.7);
+    --gray-8: hsla(0, 0%, 10%, 0.8);
+    --gray-9: hsla(0, 0%, 10%, 0.9);
+
+    --gray-20: hsl(0, 0%, 20%);
+
+    --primary-color: #05d69e;
+    --primary-color-1: hsla(164, 95%, 43%, 0.1);
+    --primary-color-2: hsla(164, 95%, 43%, 0.2);
+    --primary-color-3: hsla(164, 95%, 43%, 0.3);
+    --primary-color-4: hsla(164, 95%, 43%, 0.4);
+    --primary-color-5: hsla(164, 95%, 43%, 0.5);
+    --primary-color-6: hsla(164, 95%, 43%, 0.6);
+    --primary-color-7: hsla(164, 95%, 43%, 0.7);
+    --primary-color-8: hsla(164, 95%, 43%, 0.8);
+    --primary-color-9: hsla(164, 95%, 43%, 0.9);
+    --primary-hover: hsl(164, 95%, 53%);
+
+    --secondary-color: #05d6d6;
+    --secondary-color-1: hsla(180, 95%, 43%, 0.1);
+    --secondary-color-2: hsla(180, 95%, 43%, 0.2);
+    --secondary-color-3: hsla(180, 95%, 43%, 0.3);
+    --secondary-color-4: hsla(180, 95%, 43%, 0.4);
+    --secondary-color-5: hsla(180, 95%, 43%, 0.5);
+    --secondary-color-6: hsla(180, 95%, 43%, 0.6);
+    --secondary-color-7: hsla(180, 95%, 43%, 0.7);
+    --secondary-color-8: hsla(180, 95%, 43%, 0.8);
+    --secondary-color-9: hsla(180, 95%, 43%, 0.9);
+    --secondary-hover: hsl(180, 95%, 53%);
+
+    --tertiary-color: #d60521;
+    --tertiary-color-1: hsla(352, 95%, 43%, 0.1);
+    --tertiary-color-2: hsla(352, 95%, 43%, 0.2);
+    --tertiary-color-3: hsla(352, 95%, 43%, 0.3);
+    --tertiary-color-4: hsla(352, 95%, 43%, 0.4);
+    --tertiary-color-5: hsla(352, 95%, 43%, 0.5);
+    --tertiary-color-6: hsla(352, 95%, 43%, 0.6);
+    --tertiary-color-7: hsla(352, 95%, 43%, 0.7);
+    --tertiary-color-8: hsla(352, 95%, 43%, 0.8);
+    --tertiary-color-9: hsla(352, 95%, 43%, 0.9);
+    --tertiary-hover: hsl(352, 95%, 53%);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
+    line-height: 1.6;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+div,
+span,
+p,
+a,
+img,
+form,
+input,
+button,
+textarea,
+select,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 50px;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0 20px;
+    background-color: var(--bg);
+    z-index: 1;
+}
+
+.header::after {
+    content: '';
+    height: 30px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: linear-gradient(180deg, var(--clear-3) 0%, #00000000 100%);
+    pointer-events: none;
+}
+
+.header .nav {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.header .logo {
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 125%;
+}
+
+.header .logo img {
+    width: 35px;
+    height: 35px;
+}
+
+.header .navLinks {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.header .navLinks a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+    color: var(--mid-75);
+    transition: 150ms;
+}
+
+.header .navLinks a:hover {
+    color: var(--fg);
+    text-shadow: 0 0 2px var(--fg);
+}
+
+.header .navLinks a.active {
+    color: var(--primary-color);
+}
+
+.header .navLinks a.active:hover {
+    text-shadow: 0 0 2px var(--primary-hover);
+}
+
+.header .navLinks a[target='_blank']::after {
+    content: url('../media/link.svg');
+    -webkit-filter: invert(0.2);
+    filter: invert(0.2);
+    transition: 150ms;
+}
+
+.header .navLinks a[target='_blank']:hover::after {
+    -webkit-filter: invert(0) drop-shadow(0 0 2px var(--fg));
+    filter: invert(0) drop-shadow(0 0 2px var(--fg));
+}
+
+.main {
+    display: flex;
+    background-color: var(--clear-1);
+}
+
+.main .article,
+.main .homeCnt,
+.main .blogCnt {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    background-color: var(--bg);
+}
+
+.main .homeCnt {
+    height: calc(100vh - 50px);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.homeCnt .homeTitle {
+    margin: 0;
+    font-size: 300%;
+}
+
+.homeCnt .homeSubTitle {
+    font-size: 150%;
+    color: var(--mid);
+}
+
+.homeCnt .homeBtns a {
+    padding: 15px 20px;
+    background-color: var(--fg);
+    color: var(--bg);
+    border-radius: 5px;
+    transition: 150ms;
+    font-size: 125%;
+}
+
+.homeCnt .homeBtns a:hover {
+    background-color: var(--fg-5);
+    color: var(--bg);
+}
+
+.homeCnt .homeBtns a:active {
+    background-color: var(--fg-3);
+}
+
+.main .blogCnt {
+    min-height: calc(100vh - 50px);
+    margin: auto;
+}
+
+.blogCnt .articleLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid var(--mid);
+    transition: 150ms;
+}
+
+.blogCnt .articleLink::after {
+    content: '\2192';
+    font-size: 200%;
+    transition: 150ms;
+}
+
+.blogCnt .articleLink:hover {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.blogCnt .articleLink:active {
+    color: var(--primary-hover);
+    border: 1px solid var(--primary-hover);
+}
+
+.blogCnt .articleLink:hover::after {
+    transform: translateX(10px);
+}
+
+.blogCnt .articleLink:active::after {
+    transform: translateX(11px);
+}
+
+.blogCnt .articleLink .articleInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.articleLink .articleInfo .articleAuthor,
+.articleLink .articleInfo .articleDate {
+    color: var(--mid);
+    font-size: 80%;
+}
+
+.aside {
+    width: 300px;
+    min-width: 300px;
+    height: calc(100vh - 90px);
+    position: sticky;
+    top: 50px;
+    padding: 20px;
+    background-color: var(--bg);
+    overflow: auto;
+}
+
+.aside .articleNav a {
+    display: block;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: var(--fg-1);
+    border-radius: 5px;
+    transition: 200ms;
+}
+
+.aside .articleNav a:hover {
+    background-color: var(--fg-3);
+}
+
+.aside .articleNav a:active {
+    transition: 0s;
+    background-color: var(--fg-5);
+}
+
+.aside .articleNav a.active {
+    background-color: var(--primary-color-5);
+}
+
+.aside .articleNav a.active:hover {
+    background-color: var(--primary-color-7);
+}
+
+.aside .articleNav a.active:active {
+    transition: 0s;
+    background-color: var(--primary-color-9);
+}
+
+.article section {
+    display: none;
+}
+
+.article section a {
+    color: var(--primary-color);
+    box-shadow: 0 1px var(--primary-color);
+    transition: 200ms;
+}
+
+.article section a:hover {
+    transition: 0ms;
+    color: var(--primary-hover);
+    box-shadow: none;
+}
+
+.article section a:active {
+    transition: 0ms;
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.article section pre,
+.article section code {
+    width: min-content;
+    padding: 2px 5px;
+    background-color: var(--secondary-color-1);
+    border-radius: 5px;
+}
+
+.article section.active {
+    display: block;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+}
+
+/* .footer .footerNav, */
+.footer .footerEnd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid var(--bg-35);
+}
+
+/* .footerNav {
+    gap: 10px;
+}
+
+.footerNav .footerNavTop a {
+    width: 35px;
+    height: 35px;
+    display: block;
+}
+
+.footerNav .footerNavTop img {
+    width: 100%;
+    height: 100%;
+    transition: 150ms;
+}
+
+.footerNav .footerNavTop img:hover {
+    -webkit-filter: invert(0.5);
+    -ms-filter: invert(0.5);
+    filter: invert(0.5);
+}
+
+.footerNav .footerNavLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerNav .footerNavLinks a {
+    color: var(--fg);
+    transition: 150ms;
+}
+
+.footerNav .footerNavLinks a:hover {
+    color: var(--fg-5);
+}
+
+.footerNav .footerNavLinks a[target='_blank']::after {
+    content: url('../media/link.svg');
+    transition: 150ms;
+}
+
+.footerNav .footerNavLinks a[target='_blank']:hover::after {
+    filter: invert(0.5);
+} */
+
+.footerEnd {
+    color: var(--fg-8);
+    font-size: 75%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: var(--bg);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--mid);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--mid-75);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--fg);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: var(--bg);
+}
+
+::-moz-selection {
+    background-color: var(--primary-color-7);
+    color: var(--fg);
+}
+
+::selection {
+    background-color: var(--primary-color-7);
+    color: var(--fg);
+}

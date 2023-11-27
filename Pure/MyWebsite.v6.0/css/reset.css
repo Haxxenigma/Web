@@ -1,0 +1,133 @@
+:root {
+    --bg: #000;
+    --header-bg: #000d1ad0;
+    --main-bg: #001a33d0;
+    --text-color: #fff;
+    --sec-text-color: #999;
+    --act-text-color: #1a8cff;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+ol,
+li,
+form,
+input,
+button,
+textarea,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: var(--bg);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1613232039_81-p-fon-s-uzorom-sinii-dlya-fotoshopa-125.jpg') no-repeat fixed center center;
+    background-size: cover;
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6em;
+}
+
+a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.page a {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.page a:hover {
+    color: var(--sec-text-color);
+    text-decoration: none;
+    transition: 0s;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+
+::-moz-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+::-moz-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-moz-scrollbar-thumb:hover {
+    background: #fff;
+}
+
+::-ms-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+::-ms-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-ms-scrollbar-thumb:hover {
+    background: #fff;
+}

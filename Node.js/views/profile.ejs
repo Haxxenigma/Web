@@ -1,0 +1,69 @@
+<%- include('header') -%>
+<main class='main'>
+    <div class='innerMain'>
+        <div class='profileInfo'>
+            <div class='profileImage'>
+                <% if (profile.user_image) { %>
+                <img src='/uploads/<%= profile.user_image %>' alt='Avatar'>
+                <% } else { %>
+                <img src='/media/profile.svg' alt='Avatar'>
+                <% } %>
+            </div>
+            <div class='profileName'>
+                <span><%= profile.name %></span>
+                <span><%= profile.birth_date %></span>
+            </div>
+            <% if (user == profile.name) { %>
+            <div class='profileActions'>
+                <a href='/users/<%= profile.name %>/edit'>
+                    <img src='/media/settings.svg' alt='Settings'>
+                </a>
+            </div>
+            <% } %>
+        </div>
+        <div class="title">
+            <h1 id="articles">List of <%= profile.name %>'s articles</h1>
+            <hr>
+        </div>
+        <div class='articles'>
+            <% if (articles.length > 0) { %>
+            <% articles.forEach(article => { %>
+            <div class='articleCard'>
+                <a href='/article/<%= article.id %>' class='innerArticleCard'>
+                    <div class='articleThumbnail'>
+                        <% if (article.thumbnail) { %>
+                        <img src='/uploads/<%= article.thumbnail %>'>
+                        <% } else { %>
+                        <img src='/media/thumbnail.svg'>
+                        <% } %>
+                    </div>
+                </a>
+                <div class='articleDate'>
+                    <%= article.created_at %>
+                </div>
+                <a href='/users/<%= article.author %>' class='articleAuthor'>
+                    <div class='articleAuthorImage'>
+                        <% if (article.author_image) { %>
+                        <img src='/uploads/<%= article.author_image %>'>
+                        <% } else { %>
+                        <img src='/media/profile.svg'>
+                        <% } %>
+                    </div><%= article.author %>
+                </a>
+                <div class="articleCntCnt">
+                    <div class='articleTitle'>
+                        <%= article.title %>
+                    </div>
+                    <div class='articleCnt'>
+                        <%- article.content %>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+            <% } else { %>
+            <p>There are no articles yet</p>
+            <% } %>
+        </div>
+    </div>
+</main>
+<%- include('footer') -%>

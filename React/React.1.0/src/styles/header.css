@@ -1,0 +1,241 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-header);
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+    z-index: 100;
+}
+
+.header .nav {
+    max-width: var(--main-width);
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.header .nav .logo:after {
+    content: url('../images/react-logo.svg');
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.header .nav .search {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+    transition: 0.1s;
+}
+
+.header .nav .search .searchBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header .nav .search .searchBar input {
+    width: 100%;
+    padding: 5px 10px 5px 30px;
+    color: rgb(255, 255, 255);
+    background: var(--color-light-soft);
+    box-shadow: inset 0 0 5px var(--color-light-medium);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.header .nav .search .searchBar input:hover {
+    box-shadow: inset 0 0 5px var(--color-light-hard);
+    transition: 0s;
+}
+
+.header .nav .search .searchBar input:focus {
+    background: transparent;
+    box-shadow: inset 0 0 5px var(--color-primary-soft);
+    transition: 0s;
+}
+
+.header .nav .search .searchBar svg {
+    position: absolute;
+    left: 5px;
+    pointer-events: none;
+}
+
+.header .nav .search .searchMenu {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 39px;
+    left: 0;
+    right: 0;
+    background: var(--bg-header);
+    backdrop-filter: blur(1px);
+}
+
+.header .nav .search .searchMenu .searchMenuOption {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header .nav .search .searchMenu .searchMenuOption input {
+    width: 10px;
+    height: 10px;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.header .nav .search .searchMenu .searchMenuOption label {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+}
+
+.header .nav .search .searchMenu .searchMenuOption,
+.header .nav .search .searchMenu .searchMenuOption input {
+    box-shadow: inset 0 0 10px var(--color-light-medium);
+    transition: 0.3s;
+}
+
+.header .nav .search .searchMenu .searchMenuOption:hover,
+.header .nav .search .searchMenu .searchMenuOption:hover input {
+    box-shadow: inset 0 0 10px var(--color-light-hard);
+    transition: 0s;
+}
+
+.header .nav .search .searchMenu .searchMenuOption:active,
+.header .nav .search .searchMenu .searchMenuOption:active input {
+    box-shadow: inset 0 0 10px var(--color-light-full);
+    transition: 0s;
+}
+
+.header .nav .search .searchMenu .searchMenuOption input:checked {
+    box-shadow: inset 0 0 10px var(--color-primary-soft);
+    transition: 0.3s;
+}
+
+.header .nav .search .searchMenu .searchMenuOption:hover input:checked {
+    box-shadow: inset 0 0 10px var(--color-primary-hard);
+    transition: 0s;
+}
+
+.header .nav .search .searchMenu .searchMenuOption:active input:checked {
+    box-shadow: inset 0 0 10px var(--color-primary-full);
+    transition: 0s;
+}
+
+.header .nav .menuToggle {
+    width: 30px;
+    height: 30px;
+    display: block;
+    box-shadow: inset 0 0 10px var(--color-primary-clear);
+    transition: 0.3s;
+}
+
+.header .nav .menuToggle:hover {
+    box-shadow: inset 0 0 10px var(--color-primary-medium);
+    transform: translateY(-1px);
+    transition: 0s;
+}
+
+.header .nav .menuToggle:active {
+    box-shadow: inset 0 0 10px var(--color-primary-full);
+    transform: scale(0.9);
+    transition: 0s;
+}
+
+.header .nav .menu {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    top: 50px;
+    right: 0;
+    padding: 50px;
+    background: var(--bg-header);
+    backdrop-filter: blur(1px);
+    box-shadow: inset 0 0 10px var(--color-primary-medium);
+    transition: 0.1s;
+}
+
+.header .nav .menu a {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.header .nav .menu a::after {
+    content: url('../images/external-link.svg');
+    filter: brightness(2);
+    transition: 0.3s;
+}
+
+.header .nav .menu a:hover {
+    color: var(--color-primary-soft);
+    text-decoration: none;
+    transition: 0s;
+}
+
+.header .nav .menu a:hover:after {
+    filter: brightness(1);
+    transition: 0s;
+}
+
+.header .nav .menu .menuExit {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.header .nav .menu .menuExit .menuExitBtn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    box-shadow: inset 0 0 10px var(--color-primary-medium);
+    font-size: larger;
+    transition: 0.3s;
+}
+
+.header .nav .menu .menuExit .menuExitBtn:hover {
+    box-shadow: inset 0 0 10px var(--color-primary-hard);
+    transform: translateY(-1px);
+    transition: 0s;
+}
+
+.header .nav .menu .menuExit .menuExitBtn:active {
+    box-shadow: inset 0 0 10px var(--color-primary-full);
+    transform: scale(0.9);
+    transition: 0s;
+}
+
+.hoverArea {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: radial-gradient(#ffffff12 0%, transparent 75%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}

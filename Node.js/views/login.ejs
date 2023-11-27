@@ -1,0 +1,32 @@
+<%- include('header') -%>
+<main class='main'>
+    <div class='innerMain'>
+        <div class='navBtns'>
+            <p>For the first time with us?</p>
+            <a href='/register' data-anchor="register">Register</a>
+        </div>
+        <form method='post' action='/login' class='form'>
+            <div class='formInput'>
+                <label for='name'>Name:</label>
+                <input type='text' id='name' name='name' required autofocus autocomplete='name'>
+            </div>
+            <div class='formInput'>
+                <label for='password'>Password:</label>
+                <input type='password' id='password' name='password' required autocomplete='current-password'>
+            </div>
+            <div class='formInput'>
+                <button type='submit'>Log In</button>
+            </div>
+        </form>
+        <% if (errors.length) { %>
+        <div class='errorListCnt'>
+            <ul class='errorList'>
+                <% errors.forEach((error) => { %>
+                <li><%= error %></li>
+                <% }); %>
+            </ul>
+        </div>
+        <% } %>
+    </div>
+</main>
+<%- include('footer') -%>

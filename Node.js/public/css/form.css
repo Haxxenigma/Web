@@ -1,0 +1,370 @@
+.navBtns {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 7px 20px;
+    background-color: var(--fg-1);
+    border-radius: 5px;
+}
+
+.navBtns a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-color);
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition: 150ms;
+}
+
+.navBtns a:hover {
+    background-color: var(--primary-color-1);
+}
+
+.navBtns a:active {
+    transition: 0ms;
+    background-color: var(--primary-color-2);
+}
+
+.navBtns a:before {
+    width: 20px;
+    height: 20px;
+    content: url('/media/undo2.svg');
+}
+
+.navBtns a[data-anchor='edit'] {
+    color: var(--secondary-color);
+}
+
+.navBtns a[data-anchor='edit']:hover {
+    background-color: var(--secondary-color-1);
+}
+
+.navBtns a[data-anchor='edit']:active {
+    transition: 0ms;
+    background-color: var(--secondary-color-2);
+}
+
+.navBtns a[data-anchor='edit']::before {
+    width: 20px;
+    height: 20px;
+    content: url('/media/edit.svg');
+}
+
+.navBtns a[data-anchor='delete'] {
+    color: var(--tertiary-color);
+}
+
+.navBtns a[data-anchor='delete']:hover {
+    background-color: var(--tertiary-color-1);
+}
+
+.navBtns a[data-anchor='delete']:active {
+    transition: 0ms;
+    background-color: var(--tertiary-color-2);
+}
+
+.navBtns a[data-anchor='delete']::before {
+    width: 20px;
+    height: 20px;
+    content: url('/media/trash.svg');
+}
+
+.navBtns a[data-anchor='create']::before {
+    width: 20px;
+    height: 20px;
+    content: url('/media/create.svg');
+}
+
+.navBtns a[data-anchor='login']::before {
+    width: 20px;
+    height: 20px;
+    content: url('/media/login.svg');
+}
+
+.navBtns a[data-anchor='register']::before {
+    width: 20px;
+    height: 20px;
+    content: url('/media/register.svg');
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 15px;
+}
+
+.formInput {
+    display: flex;
+}
+
+.formInput label,
+.formInput .label {
+    width: 175px;
+    pointer-events: none;
+}
+
+.formInput .requiredLable::after {
+    content: '*';
+    color: #ff3e3e;
+}
+
+.formInput .contentBtns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.formInput .contentBtn {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+.formInput .contentBtn:hover {
+    background-color: var(--primary-color-1);
+}
+
+.formInput .contentBtn:active {
+    transition: 0ms;
+    background-color: var(--primary-color-2);
+}
+
+.formInput .contentBtn .tooltip {
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 5px;
+    background-color: var(--primary-color-5);
+    border-radius: 5px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 150ms;
+}
+
+.formInput .contentBtn .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--primary-color-5) transparent transparent transparent;
+}
+
+.formInput .contentBtn:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.formInput input,
+.formInput textarea {
+    width: 260px;
+    height: 25px;
+    padding: 0 5px;
+    border-radius: 5px;
+    outline: 1px solid var(--fg);
+    transition: 150ms;
+}
+
+.formInput input:hover,
+.formInput textarea:hover {
+    background-color: var(--fg-1);
+}
+
+.formInput input:focus,
+.formInput textarea:focus {
+    background-color: var(--fg-1);
+    outline: 1px solid var(--primary-color);
+}
+
+.formInput input[type='date'] {
+    padding: 0 5px;
+    cursor: default;
+}
+
+.formInput input[type='date']::-webkit-calendar-picker-indicator {
+    background-color: var(--fg-4);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formInput input[type='date']::-webkit-calendar-picker-indicator:hover {
+    background-color: var(--fg-6);
+}
+
+.formInput input[type='file'] {
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.formInput input::-webkit-file-upload-button {
+    height: 100%;
+    background-color: var(--primary-color-6);
+    color: var(--fg);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.formInput input::-webkit-file-upload-button:hover {
+    background-color: var(--primary-color-9);
+}
+
+.formInput input[type='checkbox'] {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.formInput input[type='checkbox']::after {
+    content: '\2717';
+    display: block;
+    text-align: center;
+    line-height: 25px;
+}
+
+.formInput input[type='checkbox']:checked {
+    background-color: var(--primary-color);
+}
+
+.formInput input[type='checkbox']:checked::after {
+    content: '\2713';
+}
+
+.formInput textarea {
+    width: auto;
+    height: auto;
+}
+
+#currentUserImage {
+    width: 75px;
+}
+
+#currentThumbnail {
+    width: 200px;
+}
+
+.formInput button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 20px 3px 10px;
+    color: var(--primary-color);
+    border-radius: 5px;
+    outline: 1px solid var(--primary-color-2);
+    transition: 100ms;
+}
+
+.formInput button:hover {
+    background-color: var(--primary-color-2);
+}
+
+.formInput button:active {
+    transition: 0ms;
+    background-color: var(--primary-color-3);
+}
+
+.formInput button::before {
+    width: 25px;
+    height: 25px;
+    content: url('/media/ok.svg');
+}
+
+.formInput button[data-button='edit'] {
+    color: var(--secondary-color);
+    outline: 1px solid var(--secondary-color-2);
+}
+
+.formInput button[data-button='edit']:hover {
+    background-color: var(--secondary-color-2);
+}
+
+.formInput button[data-button='edit']:active {
+    transition: 0ms;
+    background-color: var(--secondary-color-3);
+}
+
+.formInput button[data-button='edit']::before {
+    width: 20px;
+    height: 20px;
+    content: url('/media/edit.svg');
+}
+
+.formInput button[data-button='delete'] {
+    color: var(--tertiary-color);
+    outline: 1px solid var(--tertiary-color-2);
+}
+
+.formInput button[data-button='delete']:hover {
+    background-color: var(--tertiary-color-2);
+}
+
+.formInput button[data-button='delete']:active {
+    transition: 0ms;
+    background-color: var(--tertiary-color-3);
+}
+
+.formInput button[data-button='delete']::before {
+    width: 20px;
+    height: 20px;
+    content: url('/media/trash.svg');
+}
+
+.formInput a {
+    padding: 1px 10px;
+    color: var(--primary-color);
+    border-radius: 5px;
+    outline: 1px solid var(--primary-color-1);
+    transition: 150ms;
+    text-align: center;
+}
+
+.formInput a:hover {
+    background-color: var(--primary-color-1);
+}
+
+.formInput a:active {
+    background-color: var(--primary-color-2);
+}
+
+.errorListCnt {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    top: 60px;
+    left: 0;
+    right: 0;
+    transition: 300ms;
+    user-select: none;
+    pointer-events: none;
+}
+
+.errorList {
+    margin: 0;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, var(--tertiary-color-8), var(--tertiary-color-7));
+    border-radius: 3px;
+}
+
+.errorListCnt.hidden {
+    opacity: 0;
+}

@@ -1,0 +1,103 @@
+@import 'vars';
+@import 'mixins';
+
+.formWrapper {
+    @include flex();
+    min-height: calc(100vh - 60px - 80px - 20px); // 1.header; 2.main padding
+}
+
+.form {
+    @include flex($wrap: wrap, $gap: 40px);
+    max-width: 400px;
+    padding: 45px 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px $black-3;
+    background-image: radial-gradient(circle at left top, $fg-2 0%, $fg-1 100%);
+}
+
+.formTitle {
+    @include select-none();
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+.formInput {
+    position: relative;
+    flex-basis: 100%;
+    height: 45px;
+    background-color: $fg-1;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .underline {
+        @include underline();
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background-color: $fg-1;
+        border-radius: 50px;
+    }
+
+    label {
+        position: absolute;
+        left: 4px;
+        bottom: 0;
+        color: $mid-75;
+        pointer-events: none;
+        transition: 0.3s;
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        padding: 12px 0 0 4px;
+        transition: 0.3s;
+
+        &:focus~label,
+        &:valid~label {
+            color: $primary;
+            translate: 0 -24px;
+            font-size: 14px;
+        }
+
+        &:focus~.underline::after,
+        &:valid~.underline::after {
+            scale: 1
+        }
+    }
+}
+
+.formLinks {
+    flex-basis: 100%;
+
+    a {
+        @include btn($c1: transparent, $border: none);
+        color: $mid-75;
+    }
+}
+
+.formSubmit {
+    flex-basis: 100%;
+
+    button {
+        @include flex($gap: 8px);
+        @include btn();
+        @include ripples();
+        width: 100%;
+        height: 40px;
+
+        >* {
+            pointer-events: none;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .form {
+        padding: 45px 25px;
+    }
+}

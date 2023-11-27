@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    {% load static %}
+    <script src="{% static 'blog/js/script.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'blog/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'blog/css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner_header">
+            <a href="/" class="logo"><img src="{% static 'blog/media/cmd.svg' %}" alt="logo" /></a>
+            <form method="get" action="{% url 'article_list' %}" class="search_form">
+                <input type="text" class="search_input" name="q" placeholder="Search.." accesskey="k" autocomplete="off"
+                    title="Search (alt + k)" />
+                <img class="search_icon" src="{% static 'blog/media/search.svg' %}" alt="search" />
+            </form>
+            <div class="profile_head profile_head_hoverable">
+                <a href="/{{ user }}" class="profile_head_link">
+                    <span class="profile_head_name">
+                        {% if user.is_authenticated %}
+                        {{ user }}
+                        {% else %}
+                        {{ "Log In" }}
+                        {% endif %}
+                    </span>
+                    <div class="profile_head_ava">
+                        <img src="{% if user.avatar %}{{ user.avatar.url }}{% else %}{% static 'blog/media/avatar.svg' %}{% endif %}"
+                            alt="avatar" />
+                    </div>
+                </a>
+                <div class="profile_dropdown">
+                    {% if user.is_authenticated %}
+                    <a href="/{{ user }}" title="Profile" id="profile_link">Profile</a>
+                    <a href="/accounts/logout" title="Log Out">Log Out</a>
+                    {% else %}
+                    <a href="/accounts/register" title="Register">Register</a>
+                    <a href="/accounts/login" title="Log In">Log In</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="inner_main">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="inner_footer">
+            <div class="f_links">
+                <a href="https://www.facebook.com/" title="facebook" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'blog/media/facebook.svg' %}" alt="facebook" />
+                </a>
+                <a href="https://www.linkedin.com/" title="linkedin" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'blog/media/linkedin.svg' %}" alt="linkedin" />
+                </a>
+                <a href="https://twitter.com/" title="twitter" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'blog/media/twitter.svg' %}" alt="twitter" />
+                </a>
+            </div>
+            <span>&copy; 2023 &middot; Index &middot; All Rights Reserved</span>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<%- include('header') -%>
+<main class='main'>
+    <div class='innerMain'>
+        <div class='navBtns'>
+            <p>Already have an account?</p>
+            <a href='/login' data-anchor="login">Log In</a>
+        </div>
+        <form method='post' action='/register' enctype='multipart/form-data' class='form'>
+            <div class='formInput'>
+                <label for='name' class="requiredLable">Name:</label>
+                <input type='text' id='name' name='name' required autofocus autocomplete='name'>
+            </div>
+            <div class='formInput'>
+                <label for='email' class="requiredLable">Email:</label>
+                <input type='email' id='email' name='email' required autocomplete='email'>
+            </div>
+            <div class='formInput'>
+                <label for='password1' class="requiredLable">Password:</label>
+                <input type='password' id='password1' name='password1' required autocomplete='new-password'>
+            </div>
+            <div class='formInput'>
+                <label for='password2' class="requiredLable">Password confirmation:</label>
+                <input type='password' id='password2' name='password2' required autocomplete='new-password'>
+            </div>
+            <div class='formInput'>
+                <label for='birthDate'>Birth Date:</label>
+                <input type='date' id='birthDate' name='birthDate' autocomplete='off'>
+            </div>
+            <div class='formInput'>
+                <label for='userImage'>Your image:</label>
+                <input type='file' id='userImage' name='userImage' accept='image/*'>
+            </div>
+            <div class='formInput'>
+                <button type='submit'>Register</button>
+            </div>
+        </form>
+        <% if (errors.length) { %>
+        <div class='errorListCnt'>
+            <ul class='errorList'>
+                <% errors.forEach((error) => { %>
+                <li><%= error %></li>
+                <% }); %>
+            </ul>
+        </div>
+        <% } %>
+    </div>
+</main>
+<%- include('footer') -%>

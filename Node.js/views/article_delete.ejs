@@ -1,0 +1,17 @@
+<%- include('header') -%>
+<main class='main'>
+    <div class='innerMain'>
+        <div class='navBtns'>
+            <a href='/article/<%= article.id %>'>Cancel</a>
+        </div>
+        <form method='post' action='/article/<%= article.id %>/delete' class='form'>
+            <div class='formInput'>
+                <p>Are you sure you want to delete <%= article.title %>?</p>
+            </div>
+            <div class='formInput'>
+                <button type='submit' data-button='delete'>Delete</button>
+            </div>
+        </form>
+    </div>
+</main>
+<%- include('footer') -%>

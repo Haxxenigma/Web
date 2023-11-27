@@ -1,0 +1,54 @@
+{% extends "blog/base.html" %}
+{% block title %}{{ profile }} | Profile{% endblock %}
+{% load static %}
+{% block content %}
+<div class="cnt profile">
+    <div class="profile_header">
+        <div class="profile_avatar">
+            <img src="{% if profile.user_profile.avatar %}{{ profile.user_profile.avatar.url }}{% else %}{% static 'blog/media/avatar.svg' %}{% endif %}"
+                alt="avatar" onclick="window.open(this.src)" />
+        </div>
+        <div class="profile_info">
+            <div class="profile_username">
+                {{ profile }}
+            </div>
+            <div class="profile_birth_date">
+                {% if profile.user_profile.birth_date %}{{ profile.user_profile.birth_date|date:'Y-m-d' }}{% endif %}
+            </div>
+        </div>
+        {% if profile.user_profile.username == user.username %}
+        <div class="profile_actions">
+            <a href="{% url 'profile_update' user_link=profile.user_link %}" title="Settings">
+                <img src="{% static 'blog/media/settings.svg' %}" alt="settings_logo" />
+            </a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="profile_cnt">
+        <div class="cnt_h">
+            <h1>List of {{ profile.user_profile }}'s articles</h1>
+        </div>
+        <div class="cnt article_list">
+            {% for article in articles %}
+            <div class="article">
+                <a href="{% url 'article_detail' article.pk %}" title="{{ article.title }}" class="article_link">
+                    <div class="article_title">{{ article.title }}</div>
+                    <div class="article_preview">
+                        <img src="{% if article.preview %}{{ article.preview.url }}{% else %}{% static 'blog/media/preview.jpg' %}{% endif %}"
+                            alt="preview">
+                    </div>
+                </a>
+                <div class="article_date">{{ article.created_at }}</div>
+                <a href="/{{ article.author }}" title="{{ article.author }}" class="article_author">
+                    <div class="author_avatar">
+                        <img src="{% if article.author.avatar %}{{ article.author.avatar.url }}{% else %}{% static 'blog/media/avatar.svg' %}{% endif %}"
+                            alt="avatar" />
+                    </div>{{ article.author }}
+                </a>
+                <div class="article_cnt">{{ article.md_content | truncatewords:2 | safe }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

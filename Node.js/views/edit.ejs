@@ -1,0 +1,57 @@
+<%- include('header') -%>
+<main class='main'>
+    <div class='innerMain'>
+        <div class='navBtns'>
+            <a href='/users/<%= profile.name %>'>Cancel</a>
+        </div>
+        <form method='post' action='/users/<%= profile.name %>/edit' enctype='multipart/form-data' class='form'>
+            <div class='formInput'>
+                <label for='name'>Name:</label>
+                <input type='text' id='name' name='name' value='<%= profile.name %>' required autofocus autocomplete='name'>
+            </div>
+            <div class='formInput'>
+                <label for='email'>Email:</label>
+                <input type='email' id='email' name='email' value='<%= profile.email %>' required autocomplete='email'>
+            </div>
+            <div class='formInput'>
+                <label for='birthDate'>Birth Date:</label>
+                <input type='date' id='birthDate' name='birthDate' value='<%= profile.birth_date %>' autocomplete='off'>
+            </div>
+            <div class='formInput'>
+                <label for='userImage'>Your image:</label>
+                <input type='file' id='userImage' name='userImage' accept='image/*'>
+            </div>
+            <div class='formInput'>
+                <label for='clearUserImage'>Clear current image?:</label>
+                <input type='checkbox' id='clearUserImage' name='clearUserImage'>
+            </div>
+            <div class='formInput'>
+                <p class="label">Your current image:</p>
+                <div id='currentUserImage'>
+                    <% if (profile.user_image) { %>
+                    <img src='/uploads/<%= profile.user_image %>'>
+                    <% } else { %>
+                    <img src='/media/profile.svg'>
+                    <% } %>
+                </div>
+            </div>
+            <div class='formInput'>
+                <p class="label">Password:</p>
+                <a href='/users/<%= profile.name %>/chpasswd' id='password'>Change password</a>
+            </div>
+            <div class='formInput'>
+                <button type='submit'>Save</button>
+            </div>
+        </form>
+        <% if (errors.length) { %>
+        <div class='errorListCnt'>
+            <ul class='errorList'>
+                <% errors.forEach((error) => { %>
+                <li><%= error %></li>
+                <% }); %>
+            </ul>
+        </div>
+        <% } %>
+    </div>
+</main>
+<%- include('footer') -%>

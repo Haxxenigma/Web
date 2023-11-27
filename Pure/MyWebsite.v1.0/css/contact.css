@@ -1,0 +1,25 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 30%;
+    gap: 35px;
+    min-height: 800px;
+}
+
+.contact>div>a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.contact>div>a:hover {
+    text-shadow: 1px 1px 1px #ffffff;
+}
+
+.contact>div>a:active {
+    text-shadow: 1px 1px 1px #0073ff;
+    color: #0073ff;
+}

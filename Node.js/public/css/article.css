@@ -1,0 +1,442 @@
+.articleWrapper {
+    display: flex;
+}
+
+.mainCnt {
+    width: 100%;
+}
+
+.asideCnt {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    position: sticky;
+    top: 50px;
+    right: 0;
+    padding: 20px;
+    transition: 150ms;
+}
+
+.asideCnt ol,
+.asideCnt ul,
+.asideCnt li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
+}
+
+.asideCnt .asideTitle h2 {
+    margin-bottom: 10px;
+    font-size: 130%;
+}
+
+.asideCnt .articleHeadersCnt li {
+    height: min-content;
+}
+
+.asideCnt .articleHeadersCnt a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 5px 10px;
+    color: var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+    transition: 150ms;
+    overflow: hidden;
+}
+
+.asideCnt .articleHeadersCnt a:hover {
+    color: var(--primary-hover);
+    background-color: var(--primary-color-1);
+}
+
+.asideCnt .articleHeadersCnt a.active {
+    color: var(--secondary-color);
+    border-left: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color-1);
+}
+
+.asideCnt .articleHeadersCnt a.active:hover {
+    color: var(--secondary-hover);
+    background-color: var(--secondary-color-2);
+}
+
+.asideCntToggle {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    right: 100%;
+    padding: 5px;
+    background-color: var(--fg-1);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px var(--bg);
+    cursor: pointer;
+}
+
+.asideCntToggle:hover {
+    background-color: var(--fg-2);
+}
+
+#bar1,
+#bar2,
+#bar3 {
+    min-width: 30px;
+    min-height: 2px;
+    max-height: 2px;
+    background-color: var(--fg);
+    border-radius: 5px;
+    transition: 150ms;
+}
+
+.asideCntClose {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: none;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    background-color: var(--fg-1);
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.asideCntClose:hover {
+    background-color: var(--fg-2);
+}
+
+#bar4 {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+}
+
+.asideCnt.active {
+    transform: translateX(0);
+}
+
+.asideCnt.active #bar1 {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.asideCnt.active #bar2 {
+    opacity: 0;
+}
+
+.asideCnt.active #bar3 {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.article .articleTitle h3 {
+    font-size: 200% !important;
+}
+
+.article .articleTitle hr {
+    width: 100%;
+    margin: 0;
+}
+
+.article .articleAuthor,
+.article .articleDate {
+    width: max-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 150%;
+    transition: 150ms;
+}
+
+.article .articleAuthor:hover,
+.article .articleDate:hover {
+    background-color: var(--fg-1);
+}
+
+.article .articleAuthorImage {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.article .articleDate {
+    font-size: 100%;
+    cursor: default;
+}
+
+.article .articleThumbnail {
+    width: 75%;
+    margin: auto;
+}
+
+.article .articleCnt {
+    padding: 40px;
+    overflow: auto;
+}
+
+.article h3 {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 150%;
+    cursor: pointer;
+}
+
+.article h3::after {
+    content: "#";
+    padding-left: 10px;
+    -webkit-filter: invert(0.5);
+    filter: invert(0.5);
+    transition: 150ms;
+}
+
+.article h3:hover::after {
+    -webkit-filter: invert(0);
+    filter: invert(0);
+}
+
+.article .articleCnt hr {
+    border-color: var(--primary-color);
+}
+
+.article .articleCnt a {
+    color: var(--primary-color);
+    transition: 150ms;
+}
+
+.article .articleCnt a:hover {
+    color: var(--primary-hover);
+    box-shadow: 0 1px var(--primary-hover);
+}
+
+.article .articleCnt code,
+.article .articleCnt pre {
+    background: linear-gradient(45deg, var(--gray), var(--gray-1));
+}
+
+.article .articleCnt code {
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.article .articleCnt .preHeader {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article .articleCnt .preHeaderCopy .tooltip {
+    position: absolute;
+    right: 125%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 5px;
+    background: linear-gradient(45deg, var(--fg-1), var(--fg-2));
+    border-radius: 5px;
+    text-align: center;
+    text-wrap: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: 150ms;
+}
+
+.article .articleCnt .preHeaderCopy .tooltip::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--fg-2);
+}
+
+.article .articleCnt .preHeaderCopy {
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.article .articleCnt .preHeaderCopy:hover {
+    background-color: var(--fg-1);
+}
+
+.article .articleCnt .preHeaderCopy:active {
+    background-color: var(--fg-2);
+}
+
+.article .articleCnt .preHeaderCopy:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.article .articleCnt pre,
+.article .articleCnt blockquote,
+.article .articleCnt .tip,
+.article .articleCnt .warning {
+    margin: 10px 0;
+    padding: 5px 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.article .articleCnt pre {
+    margin-top: 0;
+    border-left: 5px solid var(--fg-1);
+}
+
+.article .articleCnt blockquote {
+    background: linear-gradient(45deg, var(--secondary-color-1), var(--secondary-color-2));
+    border-left: 5px solid var(--secondary-color-1);
+}
+
+.article .articleCnt .tip {
+    background: linear-gradient(45deg, var(--primary-color-1), var(--primary-color-2));
+    border-left: 5px solid var(--primary-color-1);
+}
+
+.article .articleCnt .tip::before {
+    content: url('/media/tip.svg');
+    display: block;
+}
+
+.article .articleCnt .warning {
+    background: linear-gradient(45deg, var(--tertiary-color-1), var(--tertiary-color-2));
+    border-left: 5px solid var(--tertiary-color-1);
+}
+
+.article .articleCnt .warning::before {
+    content: url('/media/warning2.svg');
+    display: block;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.articleCard {
+    max-width: calc(33% - 30px);
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    outline: 1px solid var(--fg-1);
+    transition: 200ms;
+    overflow: hidden;
+}
+
+.innerArticleCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    transition: 200ms;
+}
+
+.innerArticleCard:hover .articleThumbnail {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+}
+
+.articleCard .articleThumbnail {
+    position: relative;
+    transition: 200ms;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+}
+
+.articleCard .articleThumbnail img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    user-select: none;
+    pointer-events: none;
+}
+
+.articleCard .articleDate {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    padding: 2px 10px;
+    background-color: var(--clear-3);
+    border-radius: 5px;
+    font-size: 75%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.articleCard .articleAuthor {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    top: 5px;
+    right: 10px;
+    font-size: 110%;
+    padding: 2px 10px;
+    background-color: var(--clear-3);
+    border-radius: 5px;
+    transition: 150ms;
+    cursor: pointer;
+    user-select: none;
+}
+
+.articleCard .articleAuthor:hover {
+    background-color: var(--clear-8);
+}
+
+.articleCard .articleAuthorImage {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.articleCard .articleCntCnt {
+    max-height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, var(--clear-1) 0%, var(--clear-9) 100%);
+    pointer-events: none;
+}
+
+.articleCard .articleTitle {
+    font-size: 150%;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.articleCard .articleCnt {
+    overflow: hidden;
+}

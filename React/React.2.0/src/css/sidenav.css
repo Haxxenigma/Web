@@ -1,0 +1,46 @@
+.sideNav {
+    width: 45%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    right: 0;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.75);
+    transform: translateX(100%);
+    transition: 0.3s;
+    z-index: 200;
+}
+
+.sideNav.navExpanded {
+    transform: translateX(0);
+}
+
+.sideNav #navClose {
+    width: min-content;
+    margin-bottom: 30px;
+    font-size: 250%;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.sideNav #navClose:hover {
+    color: rgb(180, 180, 180);
+    transition: 0s;
+}
+
+.sideNav .navLink {
+    width: 100%;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.sideNav .navLink:hover {
+    color: rgb(180, 180, 180);
+    transition: 0s;
+}
+
+.sideNav .navLink.active {
+    color: rgb(0, 255, 255);
+}

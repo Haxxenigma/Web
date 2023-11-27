@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD5 Hash Generator</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/hash-generator.css">
+
+    <script src="../js/header-color.js" defer></script>
+    <script src="../js/hash-options-color.js" defer></script>
+    <script src="../js/md5-hash.js" defer></script>
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="navbar">
+                <ul class="navbar-left">
+                    <li><a href="index.html" class="navbar-elements" id="main">Main</a></li>
+                    <li><a href="profile.html" class="navbar-elements" id="profile">Profile</a></li>
+                    <li><a href="md5-hash.html" class="navbar-elements" id="hashg">Hash Generator</a></li>
+                </ul>
+                <ul class="navbar-right">
+                    <li class="dropdown"><a href="hex-encoder.html" class="navbar-elements" id="encdec">Encoder &
+                            Decoders<div class="arrow-symbol">&#8250;</div></a>
+                        <ul class="dropdown-list">
+                            <li><a href="hex-encoder.html" class="dropdown-elements" id="hex-en-dec">Hex Encoder &
+                                    Decoder</a></li>
+                            <li><a href="url-encoder.html" class="dropdown-elements" id="url-en-dec">URL Encoder &
+                                    Decoder</a></li>
+                            <li><a href="base64-encoder.html" class="dropdown-elements" id="base64-en-dec">Base64
+                                    Encoder & Decoder</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main">
+            <div class="options">
+                <a href="md5-hash.html" class="option" id="md5">MD5 Hash Generator</a>
+                <a href="sha-hash.html" class="option" id="sha">SHA-256 Hash Generato</a>
+            </div>
+            <div class="textareas">
+                <textarea id="input"></textarea>
+                <div class="buttons">
+                    <button type="button" id="generate">Generate</button>
+                </div>
+                <p>Output:</p>
+                <textarea id="output" readonly></textarea>
+            </div>
+        </main>
+        <footer class="footer">
+            <div>
+                <ul>
+                    <li><a href="#"><img src="../res/facebook-icon.png"></a></li>
+                    <li><a href="#"><img src="../res/twitter-icon.png"></a></li>
+                    <li><a href="#"><img src="../res/linkedin-icon.png"></a></li>
+                    <li><a href="#"><img src="../res/github-icon.png"></a></li>
+                </ul>
+            </div>
+            <div>
+                <p>This tool is provided without warranty, guarantee, or much in the way of explanation. Note that use
+                    of this tool may or may not crash your browser, lock up your machine, erase your hard drive, or
+                    e-mail those naughty pictures you hid in the Utilities folder to your mother. Don't blame me if
+                    anything bad happens to you, because it's actually the aliens' fault. The code expressed herein is
+                    solely that of the author, and he's none too swift with the JavaScript, if you know what we mean, so
+                    it's likely to cause giggle fits in anyone who knows what they're doing. Not a flying toy. Thank you
+                    for playing. Insert coin to continue.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

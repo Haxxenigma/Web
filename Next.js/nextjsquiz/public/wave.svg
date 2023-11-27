@@ -1,0 +1,7 @@
+<svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg"
+    class="transition duration-300 ease-in-out delay-150">
+    <path
+        d="M 0,600 C 0,600 0,300 0,300 C 162.8,285.20000000000005 325.6,270.40000000000003 483,294 C 640.4,317.59999999999997 792.4000000000001,379.6 951,387 C 1109.6,394.4 1274.8,347.2 1440,300 C 1440,300 1440,600 1440,600 Z"
+        stroke="none" stroke-width="0" fill="#ffffff" fill-opacity="0.5"
+        class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+</svg>

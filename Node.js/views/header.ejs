@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>
+        <%= title %>
+    </title>
+    <script src='/js/mediaQ.js' defer></script>
+    <script src='/js/articleHeaders.js' defer></script>
+    <script src='/js/errorsModal.js' defer></script>
+    <script src='/js/admin.js' defer></script>
+    <script src='/js/contentBtns.js' defer></script>
+    <link rel='stylesheet' type='text/css' href='/css/reset.css'>
+    <link rel='stylesheet' type='text/css' href='/css/style.css'>
+    <link rel='stylesheet' type='text/css' href='/css/form.css'>
+    <link rel='stylesheet' type='text/css' href='/css/profile.css'>
+    <link rel='stylesheet' type='text/css' href='/css/article.css'>
+    <link rel='stylesheet' type='text/css' href='/css/admin.css'>
+    <link rel='stylesheet' type='text/css' href='/css/media.css'>
+</head>
+
+<body>
+    <header class='header'>
+        <div class='innerHeader'>
+            <a href='/' class='logo'><img src='/media/nodejs.svg' alt="logo"></a>
+            <form method='get' action="/search" class='searchForm'>
+                <input type='text' class='searchInput' name='q' placeholder='Search..' accesskey='k' autocomplete='off' title='Search (alt + k)'>
+                <img class='searchIcon' src='/media/search.svg'>
+            </form>
+            <div class='profileMenu profileMenuHoverable'>
+                <% if (user) { %>
+                <a href='/users/<%= user %>' class='profileMenuLink'>
+                    <div class="profileMenuArrow">
+                        <img src="/media/arrow.svg">
+                    </div>
+                    <div class='profileMenuName'><%= user %></div>
+                    <div class='profileMenuAva'>
+                        <% if (userImage) { %>
+                        <img src='/uploads/<%= userImage %>'>
+                        <% } else { %>
+                        <img src='/media/profile.svg'>
+                        <% } %>
+                    </div>
+                </a>
+                <% } else { %>
+                <a href='/login' class='profileMenuLink'>
+                    <div class="profileMenuArrow">
+                        <img src="/media/arrow.svg">
+                    </div>
+                    <div class='profileMenuName'>Log In</div>
+                    <div class='profileMenuAva'>
+                        <img src='/media/profile.svg'>
+                    </div>
+                </a>
+                <% } %>
+                <div class='profileDropdown'>
+                    <div class="profileDropdownInfo">Account</div>
+                    <% if (user) { %>
+                    <a href='/users/<%= user %>' id='profileDropdownProfileBtn'><img src="/media/profile.svg">Profile</a>
+                    <a href='/users/<%= user %>/edit'><img src="/media/settings.svg">Settings</a>
+                    <a href='/users/<%= user %>#articles'><img src="/media/myarticles.svg">My Articles</a>
+                    <a href='/logout'><img src="/media/logout.svg">Log Out</a>
+                    <% } else { %>
+                    <a href='/login'><img src="/media/login.svg">Log In</a>
+                    <a href='/register'><img src="/media/register.svg">Register</a>
+                    <% } %>
+                    <div class="profileDropdownInfo">Site</div>
+                    <a href='/'><img src="/media/home.svg">Home</a>
+                    <a href='/blog'><img src="/media/blog.svg">Blog</a>
+                    <a href='/about'><img src="/media/info.svg">About</a>
+                </div>
+            </div>
+        </div>
+    </header>

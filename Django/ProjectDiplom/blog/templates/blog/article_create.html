@@ -1,0 +1,30 @@
+{% extends "blog/base.html" %}
+{% block title %}Create an article{% endblock %}
+{% block content %}
+<div class="cnt_btns">
+    <a href="/" title="Cancel">Cancel</a><br />
+</div>
+<div class="cnt_h">
+    <h1>Create an article</h1>
+</div>
+<div class="cnt article_create">
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        <div class="form_input">
+            <label for="id_title" class="required_label">Title:</label>
+            <input type="text" name="title" maxlength="50" required id="id_title" />
+        </div>
+        <div class="form_input">
+            <label for="id_preview">Preview:</label>
+            <input type="file" name="preview" accept="image/*" id="id_preview" />
+        </div>
+        <div class="form_input">
+            <label for="id_content" class="required_label">Content:</label>
+            <textarea name="content" cols="80" rows="15" required id="id_content"></textarea>
+        </div>
+        <div class="form_btns">
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

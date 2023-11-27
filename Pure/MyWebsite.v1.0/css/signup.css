@@ -1,0 +1,108 @@
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+}
+
+.signin {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3b3b3b;
+    border-radius: 15px;
+    padding: 30px;
+    width: 20%;
+    height: 425px;
+}
+
+.signin>h2 {
+    margin-bottom: 50px;
+    font-size: xx-large;
+    color: #0073ff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box input {
+    position: relative;
+    background-color: transparent;
+    color: #ffffff;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    border-bottom: solid 2px #000000;
+    transition: all 0.2s linear;
+    z-index: 50;
+}
+
+.input-box .field:hover {
+    border-bottom: solid 2px #0073ff;
+}
+
+.input-box .field:focus {
+    border-bottom: solid 2px #0073ff;
+}
+
+.input-box i {
+    position: relative;
+    bottom: 25px;
+    transition: 0.5s;
+}
+
+.input-box .field:focus~i,
+.input-box .field:valid~i {
+    color: #0073ff;
+    bottom: 45px;
+}
+
+.links {
+    position: relative;
+    top: 15px;
+    display: flex;
+    justify-content: end;
+}
+
+.links>a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.1s linear;
+}
+
+.links>a {
+    color: #0073ff;
+}
+
+.links>a:hover {
+    text-shadow: 1px 1px 5px #0073ff;
+}
+
+.links>a:active {
+    color: #0355ba;
+}
+
+.input-box input[type='submit'] {
+    top: 50px;
+    border-radius: 10px;
+    background-color: #0073ff;
+    color: #ffffff;
+    padding: 10px;
+    transition: all 0.2s linear;
+}
+
+.input-box input[type='submit']:hover {
+    background-color: #0073ff;
+    color: #000000;
+    box-shadow: 1px 1px 10px #000000;
+}
+
+.input-box input[type='submit']:active {
+    box-shadow: 1px 1px 20px #000000;
+    background-color: #0355ba;
+    transition: all 0.1s linear;
+}

@@ -1,0 +1,66 @@
+@import 'vars';
+@import 'mixins';
+
+.profileHeader {
+    @include flex(flex-start, flex-start, $gap: 20px);
+    position: relative;
+    width: 100%;
+
+    .profileImage {
+        @include flex();
+        min-width: 60px;
+        min-height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .profileInfo {
+        @include flex();
+
+        .profileName {
+            span {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .profileActions {
+        @include flex($gap: 10px);
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        >a {
+            @include flex();
+            padding: 4px;
+            border-radius: 4px;
+            transition: 0.3s;
+            background-color: $fg-1;
+
+            &:hover {
+                background-color: $primary-5;
+            }
+
+            &:active {
+                transition: 0s;
+                background-color: $primary-3;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .profileHeader {
+        flex-direction: column;
+    }
+
+    .profileImage,
+    .profileInfo {
+        align-self: center;
+    }
+
+    .profileActions {
+        width: 100%;
+        justify-content: space-around !important;
+    }
+}

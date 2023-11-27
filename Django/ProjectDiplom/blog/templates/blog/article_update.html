@@ -1,0 +1,39 @@
+{% extends "blog/base.html" %}
+{% block title %}Edit the article"{{ article.title }}"{% endblock %}
+{% load static %}
+{% block content %}
+<div class="cnt_btns">
+    <a href="{% url 'article_detail' article.pk %}" title="Cancel">Cancel</a>
+</div>
+<div class="cnt_h">
+    <h1>Edit the article "{{ article.title }}"</h1>
+</div>
+<div class="cnt article_update">
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        <div class="form_input">
+            <label for="id_title">Title:</label>
+            <input type="text" name="title" value="{{ article.title }}" maxlength="50" required id="id_title" />
+        </div>
+        <div class="form_input">
+            <label for="id_preview">Preview:</label>
+            <input type="file" name="preview" accept="image/*" id="id_preview" />
+        </div>
+        <div class="form_input">
+            <label for="preview-clear_id">Clear currently preview?</label>
+            <input type="checkbox" name="preview-clear" id="preview-clear_id" />
+            <a href="{% if article.preview %}{{ article.preview.url }}{% else %}{% static 'blog/media/preview.jpg' %}{% endif %}"
+                title="{{ article.preview }}">
+                <img src="{% if article.preview %}{{ article.preview.url }}{% else %}{% static 'blog/media/preview.jpg' %}{% endif %}"
+                    alt="preview" class="article_update_pre" /></a>
+        </div>
+        <div class="form_input">
+            <label for="id_content">Content:</label>
+            <textarea name="content" cols="80" rows="15" required id="id_content" />{{ article.content }}</textarea>
+        </div>
+        <div class="form_btns">
+            <button type="submit" id="form_btn_update">Save</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

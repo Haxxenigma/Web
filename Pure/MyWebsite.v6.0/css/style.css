@@ -1,0 +1,133 @@
+.header {
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    top: 0;
+    background: var(--header-bg);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    box-shadow: 0 1px 5px #000;
+    z-index: 200;
+}
+
+.header .header-logo {
+    width: 200px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 0 5px #000;
+}
+
+.header .header-logo a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.header .header-link {
+    width: max-content;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header-link button {
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    gap: 5px;
+    transition: 0.2s;
+    z-index: 200;
+}
+
+.header .header-link button:hover {
+    background: var(--main-bg);
+    transition: 0s;
+}
+
+.header .header-link #header-arrow {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.header .header-link #header-arrow.active {
+    transform: rotate(360deg);
+}
+
+.header .header-link .dropdown.active {
+    top: 100%;
+    pointer-events: all;
+    visibility: visible;
+    opacity: 1;
+}
+
+.header .header-link .dropdown {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -500%;
+    left: 0;
+    background: var(--header-bg);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    list-style: none;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.header .header-link .dropdown li {
+    width: 100%;
+    height: 50px;
+}
+
+.header .header-link .dropdown a {
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.header .header-link .dropdown a:hover {
+    background: var(--main-bg);
+    transition: 0s;
+}
+
+/*footer*/
+.footer {
+    max-width: 950px;
+    position: relative;
+    margin: auto;
+    padding: 60px 20px;
+    font-size: 14px;
+    background: var(--main-bg);
+    color: var(--text-color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.footer .footer-links svg {
+    width: 30px;
+    height: 30px;
+    filter: invert(0.5);
+    transition: 0.3s;
+}
+
+.footer .footer-links svg:hover {
+    filter: invert(0);
+    transform: translateY(-2px);
+    transition: 0s;
+}

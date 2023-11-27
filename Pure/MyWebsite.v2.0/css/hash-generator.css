@@ -1,0 +1,96 @@
+.main {
+    width: 75%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    top: 75px;
+    margin: auto;
+}
+
+/*options*/
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.options a {
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    background-color: #fff;
+    color: #000;
+    border: inset 3px #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.options a:hover {
+    background-color: #0095ff;
+    color: #000;
+    border: outset 3px #000000;
+}
+
+.options a:active {
+    background-color: #005998;
+}
+
+/*active*/
+.options .active {
+    background-color: #0095ff;
+}
+
+/*textareas*/
+.textareas {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 50px;
+}
+
+.textareas textarea {
+    width: 75%;
+    min-height: 250px;
+    padding: 5px;
+    border: none;
+    outline: solid 1px #fff;
+    background-color: #565656;
+    color: #fff;
+    resize: vertical;
+}
+
+.textareas textarea:hover {
+    outline: solid 2px #fff;
+}
+
+.textareas textarea:focus {
+    outline: solid 3px #fff;
+}
+
+/*buttons*/
+.buttons button {
+    height: 35px;
+    margin: 15px 0;
+    padding: 0 5px;
+    background-color: #fff;
+    color: #000;
+    border: inset 3px #000000;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    background-color: #00ccff;
+    border: outset 3px #000000;
+}
+
+.buttons button:active {
+    background-color: #0095ff;
+}

@@ -1,0 +1,74 @@
+@mixin select-none() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@mixin flex($x: center, $y: center, $dir: row, $wrap: nowrap, $gap: 0) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
+@mixin btn ($c1: $bg, $c2: $fg, $c3: $fg-1, $c4: $fg-2, $border: $mid, $radius: 4px, $pad: 4px 16px) {
+    padding: $pad;
+    background-color: $c1;
+    color: $c2;
+    border: 1px solid $border;
+    border-radius: $radius;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: $c3;
+    }
+
+    &:active {
+        transition: 0s;
+        background-color: $c4;
+    }
+}
+
+@mixin ripples($color: $fg-1) {
+    position: relative;
+    overflow: hidden;
+
+    .ripples {
+        position: absolute;
+        background-color: $color;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        animation: rippleEffect 0.8s;
+    }
+
+    @keyframes rippleEffect {
+        from {
+            width: 0;
+            height: 0;
+        }
+
+        to {
+            width: 500px;
+            height: 500px;
+            opacity: 0;
+        }
+    }
+}
+
+@mixin underline($height: 1px, $bottom: 0, $left: 0, $bg: $primary) {
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: $height;
+        bottom: $bottom;
+        left: $left;
+        scale: 0;
+        background-color: $bg;
+        transform-origin: center;
+        transition: 0.3s;
+    }
+}

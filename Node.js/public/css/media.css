@@ -1,0 +1,90 @@
+@media screen and (max-width: 1000px) {
+    .asideCntToggle {
+        display: flex;
+    }
+
+    .asideCntClose {
+        display: flex;
+    }
+
+    .asideCnt {
+        position: fixed;
+        background-color: var(--bg);
+        transform: translateX(100%);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .articleCard {
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .searchInput {
+        width: 230px;
+    }
+
+    .articleCard {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .innerMain {
+        padding: 10px;
+    }
+
+    .searchInput {
+        width: 150px;
+    }
+
+    .profileMenu a {
+        width: 50px;
+    }
+
+    .profileMenuName {
+        display: none;
+    }
+
+    .profileMenuArrow {
+        display: none;
+    }
+
+    .profileDropdown {
+        left: 0;
+        right: 0;
+    }
+
+    .profileDropdown>a {
+        width: 100%;
+    }
+
+    #profileDropdownProfileBtn {
+        display: flex;
+    }
+
+    .formInput {
+        flex-direction: column;
+    }
+
+    .formInput input {
+        width: 100%;
+    }
+
+    .formInput input[type='file'] {
+        width: max-content;
+    }
+
+    .formInput input[type='checkbox'] {
+        width: 25px;
+    }
+
+    .article .articleThumbnail {
+        width: 90%;
+    }
+
+    .article .articleCnt {
+        padding: 20px;
+    }
+}

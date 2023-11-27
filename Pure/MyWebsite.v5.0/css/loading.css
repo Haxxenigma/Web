@@ -1,0 +1,51 @@
+#loading-container {
+    color: #0f0;
+    user-select: none;
+    z-index: 30;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    animation: spinning 3s linear infinite;
+}
+
+@keyframes spinning {
+    0% {
+        transform: rotate(0deg);
+        background: url('../res/spinner.svg');
+    }
+
+    20% {
+        transform: rotate(360deg);
+        background: url('../res/spinner2.svg');
+    }
+
+    40% {
+        transform: rotate(720deg);
+        background: url('../res/spinner3.svg');
+    }
+
+    60% {
+        transform: rotate(1080deg);
+        background: url('../res/spinner4.svg');
+    }
+
+    75% {
+        transform: rotate(1440deg);
+        background: url('../res/spinner3.svg');
+    }
+
+    90% {
+        transform: rotate(1800deg);
+        background: url('../res/spinner2.svg');
+    }
+
+    100% {
+        transform: rotate(2160deg);
+        background: url('../res/spinner.svg');
+    }
+}

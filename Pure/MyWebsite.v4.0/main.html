@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="icon" href="./res/favicon.svg">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- JS -->
+    <script src="./js/loading.js"></script>
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <div class="loading-container" id="loading-container">
+        <div class="loader">
+            <div class="loader-info">
+                <p>Loading...</p>
+            </div>
+            <div class="loader-box">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container" id="main-container">
+        <div class="video-container">
+            <button type="button" class="btn" id="prev-btn" onclick="changeVideo('prev')"></button>
+
+            <div>
+                <video id="video-player" width="100%" height="auto" controls>
+                    <source
+                        src="https://cdn.pixabay.com/vimeo/183788677/test-tubes-5451.mp4?width=640&hash=f84faca526903eb9f4fced97ac4d91e48c700200"
+                        type="video/mp4">
+                    Your browser does not support video tag
+                </video>
+            </div>
+
+            <button type="button" class="btn" id="next-btn" onclick="changeVideo('next')"></button>
+        </div>
+    </div>
+</body>
+
+</html>

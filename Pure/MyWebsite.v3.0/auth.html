@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/136870545?v=4">
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <!-- Script -->
+    <script src="./js/auth.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <ul class="header-left">
+            <li><a href="index.html" class="header-elements" id="main">Main</a></li>
+            <li><a href="feedback.html" class="header-elements" id="feedback">Feedback</a></li>
+        </ul>
+        <ul class="header-right">
+            <li class="header-dropdown">
+                <a href="" class="header-elements" id="">Other
+                    <div class="arrow-symbol">&#8250;</div>
+                </a>
+                <ul class="dropdown-list">
+                    <li><a href="" class="dropdown-elements" id=""></a></li>
+                    <li><a href="" class="dropdown-elements" id=""></a></li>
+                    <li><a href="" class="dropdown-elements" id=""></a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <main class="main">
+        <div class="authentication">
+            <div class="auth-header">
+                <h2>Authentication</h2>
+            </div>
+            <div class="form">
+                <label for="username">Username</label>
+                <input type="username" class="input" id="username" required autocomplete="off">
+
+                <label for="password">Password</label>
+                <input type="password" class="input" id="password" required autocomplete="off">
+
+                <button type="submit" id="submit" value="" onclick="authenticate()"></button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div>
+            <ul>
+                <li>
+                    <a href="https://shikimori.me/" target="_blank">
+                        <img src="./res/shikimori-icon.svg" alt="shikimori">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/" target="_blank">
+                        <img src="./res/github-icon.svg" alt="github">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="./res/facebook-icon.svg" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="./res/linkedin-icon.svg" alt="linkedin">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <hr>
+            <p>&copy; 2023 &middot; Username</p>
+        </div>
+    </footer>
+</body>
+
+</html>

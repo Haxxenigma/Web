@@ -1,0 +1,50 @@
+@import 'vars';
+@import 'mixins';
+
+.errorModal {
+    @include flex($gap: 8px);
+    @include select-none();
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    padding: 10px;
+    padding-right: 40px;
+    background-color: $red-2;
+    border: 1px solid $red;
+    border-radius: 8px;
+    translate: -50% 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.1s;
+    z-index: 1;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    .modalClose {
+        @include flex();
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border-radius: 4px;
+        transition: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $fg-2;
+        }
+    }
+
+    .modalHeader {
+        @include flex($gap: 5px);
+        font-size: 130%;
+
+        >div {
+            @include flex();
+        }
+    }
+}

@@ -1,0 +1,160 @@
+@import 'vars';
+@import 'mixins';
+
+.settingsLayout {
+    @include flex(flex-start, flex-start);
+    border-radius: 24px;
+    background-image: radial-gradient(circle at left top, $primary-1 0%, $primary-3 100%);
+}
+
+.navToggle {
+    @include flex();
+    display: none;
+    margin: 15px 5px 15px 15px;
+    background-color: $fg-1;
+    border-radius: 4px;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: $fg-2;
+    }
+
+    &:active {
+        transition: 0s;
+        background-color: $fg-3;
+    }
+}
+
+.settingsNav {
+    @include flex(flex-start, flex-start, column, nowrap, 3px);
+    min-height: 500px;
+    flex-basis: 20%;
+    padding: 15px;
+    border-radius: 24px;
+
+    .navTitle {
+        position: relative;
+        width: 100%;
+        font-size: 28px;
+        border-bottom: 1px solid $fg-8;
+        margin-bottom: 20px;
+
+        .navClose {
+            @include flex();
+            position: absolute;
+            display: none;
+            left: 110%;
+            top: 0;
+            background-color: $fg-1;
+            border: 1px solid $fg-5;
+            box-shadow: 1px 1px 5px $bg;
+            border-radius: 4px;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: $fg-2;
+            }
+
+            &:active {
+                transition: 0s;
+                background-color: $fg-3;
+            }
+        }
+    }
+
+    .navLink {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        color: $mid-75;
+
+        a {
+            @include flex(flex-start);
+            @include ripples();
+            width: 100%;
+            height: 40px;
+            padding: 0 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $fg-1;
+                color: $fg;
+            }
+
+            &:active {
+                background-color: $fg-2;
+                color: $fg;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 4px;
+                height: 60%;
+                top: 50%;
+                left: 4px;
+                background-color: $fg;
+                border-radius: 8px;
+                transition: 0.3s;
+                transform-origin: center;
+                transform: translateY(-50%) scale(0);
+            }
+
+            &.active {
+                color: $fg;
+
+                &::after {
+                    transform: translateY(-50%) scale(1);
+                }
+            }
+        }
+    }
+}
+
+.settingsCnt {
+    flex-basis: 80%;
+}
+
+@media screen and (max-width: 750px) {
+    .settingsLayout {
+        gap: 0;
+    }
+
+    .navToggle {
+        display: flex;
+    }
+
+    .navClose {
+        display: flex !important;
+    }
+
+    .settingsNav {
+        position: absolute;
+        width: 200px;
+        top: 60px;
+        left: -1%;
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        background-color: $bg-8;
+        border-radius: 4px;
+        transition: 0.2s;
+
+        &.show {
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+
+        .navLink a .ripples {
+            display: none;
+        }
+    }
+
+    .settingsCnt {
+        flex-basis: 100%;
+    }
+}

@@ -1,0 +1,63 @@
+<%- include('header') -%>
+<main class='main'>
+    <div class='innerMain'>
+        <div class="articleWrapper">
+            <div class="mainCnt">
+                <div class='navBtns'>
+                    <a href='/blog'>Back</a>
+                    <% if (user === article.author) { %>
+                    <a href='/article/<%= article.id %>/edit' data-anchor='edit'>Edit</a>
+                    <a href='/article/<%= article.id %>/delete' data-anchor='delete'>Delete</a>
+                    <% } %>
+                </div>
+                <div class='article'>
+                    <div class='articleTitle'>
+                        <h3><%= article.title %></h3>
+                        <hr>
+                    </div>
+                    <a href='/users/<%= article.author %>' class='articleAuthor'>
+                        <div class='articleAuthorImage'>
+                            <% if (articleAuthorImage) { %>
+                            <img src='/uploads/<%= articleAuthorImage %>'>
+                            <% } else { %>
+                            <img src='/media/profile.svg'>
+                            <% } %>
+                        </div><%= article.author %>
+                    </a>
+                    <div class='articleDate'>
+                        <img src='/media/calendar.svg' alt='Calendar Icon'>
+                        <%= article.created_at %>
+                    </div>
+                    <div class='articleThumbnail'>
+                        <% if (article.thumbnail) { %>
+                        <img src='/uploads/<%= article.thumbnail %>'>
+                        <% } else { %>
+                        <img src='/media/thumbnail.svg'>
+                        <% } %>
+                    </div>
+                    <div class='articleCnt'>
+                        <%- article.content %>
+                    </div>
+                </div>
+            </div>
+            <aside class="asideCnt">
+                <div class="asideCntToggle">
+                    <div id="bar1"></div>
+                    <div id="bar2"></div>
+                    <div id="bar3"></div>
+                </div>
+                <div class="asideTitle">
+                    <div class="asideCntClose">
+                        <div id="bar4">&#215;</div>
+                    </div>
+                    <h2>In this article</h2>
+                </div>
+                <div class="articleHeadersCnt">
+                    <ul class="articleHeaders">
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+<%- include('footer') -%>

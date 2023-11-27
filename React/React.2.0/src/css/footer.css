@@ -1,0 +1,136 @@
+.footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: filter 0.5s;
+}
+
+.footer.navExpanded {
+    -webkit-filter: blur(2px) grayscale(1);
+    filter: blur(2px) grayscale(1);
+    pointer-events: none
+}
+
+.footer .fNav {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    position: relative;
+    padding: 20px;
+}
+
+.footer .fNav .fNavStart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .fNav .fNavStart .fNavLeft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer .fNav .fNavStart .fNavLeft .fNavLogo {
+    display: flex;
+    gap: 20px;
+    user-select: none;
+}
+
+.footer .fNav .fNavStart .fNavLeft .fNavLogo::before {
+    content: "00000000000000000000";
+    color: transparent;
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: url('../res/logo.jpg') no-repeat;
+    background-size: cover;
+}
+
+.footer .fNav .fNavStart .fNavLeft .fNavSocialLinks {
+    display: flex;
+    gap: 10px;
+}
+
+.footer .fNav .fNavStart .fNavLeft .fNavSocialLink::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+.footer .fNav .fNavStart .fNavLeft .fNavSocialLink.facebook::before {
+    background-image: url('../res/facebook.svg');
+}
+
+.footer .fNav .fNavStart .fNavLeft .fNavSocialLink.linkedin::before {
+    background-image: url('../res/linkedin.svg');
+}
+
+.footer .fNav .fNavStart .fNavLeft .fNavSocialLink.twitter::before {
+    background-image: url('../res/twitter.svg');
+}
+
+.footer .fNav .fNavStart .fNavLeft .fNavSocialLink.github::before {
+    background-image: url('../res/github.svg');
+}
+
+.footer .fNav .fNavStart .fNavLeft .fNavSocialLink:hover {
+    -webkit-filter: invert(0.5);
+    filter: invert(0.5);
+    transition: 0.2s;
+}
+
+.footer .fNav .fNavStart .fNavRight {
+    flex: 1;
+}
+
+.footer .fNav .fNavStart .fNavRight .fNavLinks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer .fNav .fNavStart .fNavRight .fNavLinks .fNavLink {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.footer .fNav .fNavStart .fNavRight .fNavLinks .fNavLink:hover {
+    text-decoration: none;
+    color: rgb(180, 180, 180);
+    transition: 0s;
+}
+
+.footer .fNav .fNavEnd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 80%;
+    user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+    .footer .fNav .fNavStart {
+        flex-direction: column;
+    }
+
+    .footer .fNav .fNavStart .fNavLeft {
+        align-items: center;
+    }
+
+    .footer .fNav .fNavStart .fNavRight .fNavLinks {
+        flex-direction: column;
+    }
+}

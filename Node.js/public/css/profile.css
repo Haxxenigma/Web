@@ -1,0 +1,52 @@
+.profileInfo {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.profileImage {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileName {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileName span:nth-child(1) {
+    font-size: 150%;
+}
+
+.profileName span:nth-child(2) {
+    font-size: 75%;
+}
+
+.profileActions {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.profileActions img {
+    transition: 150ms;
+}
+
+.profileActions img:hover {
+    filter: invert(1.5);
+}
+
+.title {
+    display: inline-block;
+    font-size: 120%
+}
+
+.title hr {
+    border-color: var(--primary-hover);
+}

@@ -1,0 +1,53 @@
+.notFound {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.75);
+    user-select: none;
+    transition: filter 0.5s;
+}
+
+.notFound.navExpanded {
+    -webkit-filter: blur(2px) grayscale(1);
+    filter: blur(2px) grayscale(1);
+    pointer-events: none
+}
+
+.notFound .innerMain {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.notFound .innerMain>h1 {
+    font-size: 250%;
+    border-bottom: 1px solid rgb(0, 250, 250);
+    padding-bottom: 20px;
+}
+
+.notFound .innerMain>p {
+    font-size: 150%;
+}
+
+.notFound .innerMain>a {
+    padding: 5px 10px;
+    background-color: rgb(0, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.notFound .innerMain>a:hover {
+    background-color: rgb(0, 167, 167);
+    transition: 0s;
+}

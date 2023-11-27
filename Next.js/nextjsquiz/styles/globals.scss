@@ -1,0 +1,95 @@
+@import 'variables';
+
+.main {
+    background-image: linear-gradient(45deg, $fond-10, $fond-20);
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(ellipse, $clear 10%, $fond 70%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.not_found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        display: flex;
+        width: max-content;
+        margin-top: 25px;
+        padding: 8px 32px;
+        color: $primary-color;
+        background-color: $clear-1;
+        border-radius: 8px;
+        transition: 200ms;
+
+        &:hover {
+            background-color: $fg-05;
+        }
+
+        &:active {
+            transition: 0s;
+            background-color: $fg-1;
+        }
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-250px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-250px);
+    }
+}
+
+.wave1,
+.wave2,
+.wave3 {
+    width: 150%;
+    height: 100vh;
+    position: fixed;
+    background: url('/wave.svg') no-repeat;
+    animation: move 60s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    transition: 5s;
+    scale: 1.2;
+}
+
+.wave1 {
+    bottom: -25%;
+    animation-duration: 30s;
+    animation-delay: -10s;
+}
+
+.wave2 {
+    bottom: -27%;
+    animation-duration: 40s;
+    animation-delay: -15s;
+}
+
+.wave3 {
+    bottom: -29%;
+    animation-delay: -20s;
+}
+
+@media screen and (max-width: 900px) {
+
+    .wave1,
+    .wave2,
+    .wave3 {
+        display: none;
+    }
+}

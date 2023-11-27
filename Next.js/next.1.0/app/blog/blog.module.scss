@@ -1,0 +1,126 @@
+@import 'variables';
+@import 'mixins';
+
+.btns_tab {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: $fg-1;
+    border-radius: 16px;
+
+    a {
+        @include my-btn($primary-color);
+    }
+}
+
+.articles {
+    @include flexible(space-between, flex-start);
+    flex-wrap: wrap;
+}
+
+.article {
+    position: relative;
+    width: calc(50% - 20px);
+    height: 350px;
+    margin-bottom: 20px;
+    padding: 40px 20px;
+    background-color: $fg-1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.article_title {
+    @include transition(200ms);
+    font-size: 150%;
+
+    &:hover {
+        text-shadow: 0 0 3px $fg;
+    }
+}
+
+.article_author {
+    @include transition(200ms);
+    @include flexible();
+    position: absolute;
+    gap: 5px;
+    top: 15px;
+    right: 20px;
+    padding: 5px 10px;
+    background-color: $clear-1;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: $clear-2;
+    }
+
+    &:active {
+        @include transition(0s);
+        background-color: $clear-3;
+    }
+}
+
+.article_author_img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.article_date {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: $mid-75;
+}
+
+.article_content {
+    max-height: 200px;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article_btn {
+    @include transition(200ms);
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    color: $mid-75;
+    background-color: $fg-1;
+    border-radius: 8px;
+
+    &:hover {
+        color: $fg;
+        background-color: $fg-2;
+    }
+
+    &:active {
+        @include transition(0s);
+        background-color: $fg-3;
+    }
+
+    &::after {
+        @include transition(200ms);
+        content: '\2192';
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateX(-100%) scale(1.5);
+        -moz-transform: translateX(-100%) scale(1.5);
+        -ms-transform: translateX(-100%) scale(1.5);
+        -o-transform: translateX(-100%) scale(1.5);
+        transform: translateX(-100%) scale(1.5);
+    }
+
+    &:hover::after {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateX(50%) scale(1.5);
+        -moz-transform: translateX(50%) scale(1.5);
+        -ms-transform: translateX(50%) scale(1.5);
+        -o-transform: translateX(50%) scale(1.5);
+        transform: translateX(50%) scale(1.5);
+    }
+}

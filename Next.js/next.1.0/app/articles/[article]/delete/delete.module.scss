@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+
+.delete_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 110%;
+
+    label {
+        pointer-events: none;
+    }
+}
+
+.delete_form_btns {
+    display: flex;
+    gap: 20px;
+
+    a {
+        @include my-btn($primary-color);
+    }
+
+    button {
+        @include my-btn($tertiary-color);
+    }
+}

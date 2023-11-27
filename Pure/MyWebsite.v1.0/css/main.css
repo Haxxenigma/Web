@@ -1,0 +1,40 @@
+.main {
+    width: 47%;
+    margin: 150px auto;
+    min-height: 800px;
+}
+
+.side {
+    position: fixed;
+    width: 20%;
+    top: 130px;
+    left: 0;
+}
+
+.side a {
+    display: block;
+    padding: 15px 45px;
+    text-decoration: none;
+    color: #b2b2b2;
+    transition: all 0.2s linear;
+}
+
+.side a:hover {
+    color: #ffffff;
+    text-shadow: 1px 0 10px #ffffff;
+}
+
+.side a:active {
+    color: #0073ff;
+    text-shadow: 1px 0 10px #0073ff;
+    transition: all 0.1s ease;
+}
+
+.right-side {
+    right: 0;
+    left: auto;
+}
+
+.nav-link.active {
+    color: #0073ff;
+}

@@ -1,0 +1,300 @@
+@import 'vars';
+@import 'mixins';
+
+.header {
+    @include flex();
+    @include select-none();
+    position: sticky;
+    height: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 16px;
+    background-color: $bg-7;
+    border-bottom: 1px solid $fg-3;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 30px;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: linear-gradient(180deg, $black-3 0%, transparent 100%);
+        pointer-events: none;
+    }
+}
+
+.nav {
+    @include flex(space-between);
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+.navLeft {
+    @include flex($gap: 15px);
+
+    .navToggle {
+        @include flex();
+        display: none;
+        padding: 5px;
+        border-radius: 4px;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $fg-1;
+        }
+
+        &:active {
+            transition: 0s;
+            background-color: $fg-2;
+        }
+    }
+
+    .logo {
+        @include flex();
+    }
+
+    .navLinksWrapper {
+        @include flex($gap: 15px);
+
+        .navLinkCnt {
+            @include underline(2px);
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                translate: 0 10px;
+            }
+
+            &.active::after {
+                scale: 1;
+            }
+
+            &.active>.navLink {
+                color: $fg;
+            }
+        }
+
+        .navLink {
+            @include flex();
+            @include ripples($primary-3);
+            height: 40px;
+            padding: 4px 16px;
+            border-radius: 4px;
+            transition: 0.3s;
+            color: $mid-75;
+
+            &:hover {
+                background-color: $primary-1;
+                color: $primary !important;
+            }
+        }
+    }
+}
+
+.navRight {
+    @include flex($gap: 30px);
+
+    .themeToggler {
+        @include flex(space-between);
+        width: 52px;
+        height: 27px;
+        background-color: $fg-1;
+        border: 1px solid transparent;
+        border-radius: 32px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $fg-2;
+            border: 1px solid $primary-3;
+        }
+
+        &:active {
+            transition: 0s;
+            background-color: $fg-3;
+            border: 1px solid $primary-4;
+        }
+
+        .themeTogglerBtn {
+            width: 25px;
+            height: 25px;
+            background-color: $bg-5;
+            border-radius: 50%;
+            transition: 0.3s;
+
+            &.active {
+                transform: translateX(25px);
+            }
+        }
+    }
+
+    .navLogin {
+        @include flex($gap: 5px);
+        @include btn();
+    }
+
+    .navRegister {
+        @include flex($gap: 5px);
+        @include btn($primary, $bg, $primary-8, $primary-6);
+    }
+}
+
+.dropdownWrapper {
+    position: relative;
+
+    .dropdownMenu {
+        @include flex(flex-end, $gap: 5px);
+        @include ripples();
+        max-width: 180px;
+        min-width: 180px;
+        height: 50px;
+        padding: 0 10px;
+        border-radius: 4px;
+        transition: 0.2s;
+        cursor: pointer;
+
+        >* {
+            pointer-events: none;
+        }
+
+        &:hover {
+            background-color: $fg-1;
+        }
+
+        &:active {
+            transition: 0s;
+            background-color: $fg-2;
+        }
+
+        .dropdownMenuName {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
+        }
+
+        .dropdownMenuImage {
+            @include flex();
+            min-width: 40px;
+            min-height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .loader {
+            width: 40px;
+            height: 40px;
+            background-color: $mid;
+            background-image: linear-gradient(100deg, $mid 0px, $mid-75 40px, $mid 80px);
+            background-size: 200px;
+            animation: shine 2s infinite linear;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: -200px;
+            }
+
+            100% {
+                background-position: 200px;
+            }
+        }
+    }
+
+    .dropdown {
+        @include flex($dir: column, $gap: 5px);
+        position: absolute;
+        width: 200px;
+        top: 110%;
+        right: 0;
+        padding: 12px 4px;
+        background-color: $bg-8;
+        box-shadow: inset 0 0 100px $fg-1;
+        border-radius: 8px;
+        transition: 0.2s;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 1;
+
+        &.active {
+            top: 125%;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+
+        >button,
+        >a,
+        >span {
+            @include flex(flex-start, $gap: 5px);
+            width: 100%;
+            height: 40px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $fg-1;
+            }
+
+            &:active {
+                background-color: $fg-2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .dropdownMenuName {
+        display: none;
+    }
+
+    .dropdownWrapper .dropdownMenu {
+        min-width: 60px;
+        max-width: 60px;
+    }
+
+    .navLeft {
+        .navToggle {
+            display: flex;
+        }
+
+        .navLinksWrapper {
+            position: absolute;
+            display: none;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 0;
+            top: 60px;
+            left: 0;
+            background-color: $bg-9;
+
+            &.show {
+                display: block;
+            }
+
+            .navLinkCnt {
+                flex-basis: 100%;
+
+                &::after {
+                    display: none;
+                }
+
+                .navLink {
+                    height: 60px;
+                    border-bottom: 1px solid $fg-1;
+
+                    .ripples {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

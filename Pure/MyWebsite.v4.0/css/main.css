@@ -1,0 +1,80 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-container {
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: "Courier New", monospace;
+}
+
+.video-container {
+    width: 50%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px double rgb(0, 255, 0);
+    animation: appearance 1s linear;
+}
+
+.btn {
+    position: absolute;
+    top: 45%;
+    background-color: transparent;
+    color: rgb(0, 255, 0);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#prev-btn {
+    left: -50px;
+    border-right: 20px solid;
+    border-left: none;
+
+    &:hover {
+        border-right-color: rgb(0, 99, 0);
+    }
+
+    &:active {
+        border-right-color: rgb(0, 40, 0);
+    }
+}
+
+#next-btn {
+    right: -50px;
+    border-left: 20px solid;
+    border-right: none;
+
+    &:hover {
+        border-left-color: rgb(0, 99, 0);
+    }
+
+    &:active {
+        border-left-color: rgb(0, 40, 0);
+    }
+}
+
+@keyframes appearance {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
+::selection {
+    background-color: rgb(0, 255, 0);
+    color: rgb(0, 0, 0);
+}
