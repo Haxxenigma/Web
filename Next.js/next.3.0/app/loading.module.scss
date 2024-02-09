@@ -1,0 +1,25 @@
+@import '@/styles/mixins';
+
+.loading {
+    @include flex();
+    height: calc(100vh - 60px - 60px);
+
+    .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid var(--fg);
+        border-bottom-color: var(--primary);
+        border-radius: 50%;
+        animation: rotation 0.5s linear infinite;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

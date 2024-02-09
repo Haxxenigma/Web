@@ -1,0 +1,54 @@
+@import '@/styles/mixins';
+
+.contextMenuBtn {
+    @include flex();
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgba(var(--fg-rgb), 0.7);
+    background-color: rgba(var(--bg-rgb), 0.3);
+    border-radius: 4px;
+    transition: 0.3s;
+
+    &:hover {
+        color: rgba(var(--fg-rgb), 1);
+        background-color: rgba(var(--bg-rgb), 0.4);
+    }
+}
+
+.contextMenu {
+    @include flex($dir: column, $gap: 5px);
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    padding: 4px 0;
+    color: rgba(var(--fg-rgb), 0.7);
+    background-color: rgba(var(--bg-rgb), 0.8);
+    box-shadow: inset 0 0 75px rgba(var(--fg-rgb), 0.2);
+    border-radius: 4px;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    .menuBtn {
+        @include flex(flex-start, $gap: 5px);
+        width: 150px;
+        height: 40px;
+        padding: 8px;
+        border-radius: 4px;
+        transition: 0.3s;
+
+        &:hover {
+            color: rgba(var(--fg-rgb), 1);
+            background-color: rgba(var(--fg-rgb), 0.1);
+        }
+
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+}

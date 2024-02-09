@@ -1,0 +1,91 @@
+@import '@/styles/mixins';
+
+.form {
+    @include flex($dir: column);
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: rgba(var(--fg-rgb), 0.1);
+    border: 1px solid rgba(var(--fg-rgb), 0.1);
+    border-radius: 12px;
+
+    .title {
+        width: 100%;
+        padding-bottom: 15px;
+        font-size: 24px;
+    }
+
+    .upload {
+        @include flex($dir: column, $gap: 8px);
+        max-width: 500px;
+        min-width: 300px;
+        height: 200px;
+        padding: 8px 32px;
+        color: var(--gray);
+        background-color: rgba(var(--fg-rgb), 0.1);
+        border: 1px solid var(--gray);
+        border-radius: 8px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--fg);
+            background-color: rgba(var(--fg-rgb), 0.15);
+            border: 1px solid var(--fg);
+
+            .header {
+                color: rgba(var(--primary-rgb), 1);
+            }
+        }
+
+        &.dragActive {
+            animation: hello 2s linear infinite;
+
+            @keyframes hello {
+                0% {
+                    background-color: rgba(var(--fg-rgb), 0.1);
+                }
+
+                50% {
+                    background-color: rgba(var(--fg-rgb), 0.2);
+                }
+            }
+        }
+
+        div {
+            @include flex(flex-start, $gap: 5px);
+            text-align: center;
+
+            &.header {
+                color: rgba(var(--primary-rgb), 0.8);
+                transition: 0.3s;
+            }
+
+            &.footer * {
+                font-size: 14px;
+            }
+
+            &.footer .filename {
+                display: block;
+                max-width: 200px;
+                text-wrap: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .input {
+            position: absolute;
+            width: 0;
+        }
+
+        * {
+            pointer-events: none;
+        }
+    }
+
+    .buttons {
+        @include flex($gap: 35px);
+        margin-top: 25px;
+    }
+}

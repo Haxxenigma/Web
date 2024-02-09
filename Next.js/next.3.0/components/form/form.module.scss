@@ -1,0 +1,17 @@
+@import '@/styles/mixins';
+
+.wrapper {
+    @include flex();
+    height: calc(100vh - 60px - 60px);
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .form {
+        width: 350px;
+
+        .title {
+            font-size: 28px;
+            margin: 32px 0;
+        }
+    }
+}

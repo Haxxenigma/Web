@@ -1,0 +1,51 @@
+@import '@/styles/mixins';
+
+.myLink,
+.myButton {
+    @include flex($gap: 5px);
+    width: max-content;
+    padding: 6px 16px;
+    color: var(--bg);
+    background-color: var(--fg);
+    border-radius: 4px;
+    text-wrap: nowrap;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: rgba(var(--fg-rgb), 0.7);
+    }
+
+    &:active {
+        transition: 0s;
+        background-color: rgba(var(--fg-rgb), 0.5);
+    }
+
+    &.inverse {
+        color: var(--fg);
+        background-color: var(--bg);
+        border: solid 1px var(--fg);
+
+        &:hover {
+            background-color: rgba(var(--fg-rgb), 0.2);
+        }
+
+        &:active {
+            background-color: rgba(var(--fg-rgb), 0.4);
+        }
+    }
+
+    .loader {
+        @include flex();
+        animation: spin 0.5s infinite linear;
+
+        @keyframes spin {
+            from {
+                rotate: 0deg;
+            }
+
+            to {
+                rotate: 360deg;
+            }
+        }
+    }
+}

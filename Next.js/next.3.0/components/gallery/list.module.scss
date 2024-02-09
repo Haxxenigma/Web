@@ -1,0 +1,59 @@
+@import '@/styles/mixins';
+
+.list {
+    .header {
+        @include flex(space-between);
+        margin: 36px 12px 0;
+
+        .title {
+            font-size: 24px;
+        }
+
+        button {
+            padding: 8px;
+
+            &.isRefreshing {
+                svg {
+                    animation: spin 0.3s infinite linear;
+                }
+            }
+
+            @keyframes spin {
+                from {
+                    rotate: 0deg;
+                }
+
+                to {
+                    rotate: 360deg;
+                }
+            }
+        }
+    }
+
+    .images {
+        @include flex($wrap: wrap, $gap: 25px);
+        margin-top: 25px;
+
+        .container {
+            position: relative;
+            max-width: 30%;
+            border: 1px solid transparent;
+            transition: 0.3s;
+
+            .imageCnt {
+                @include flex();
+
+                .image {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &:hover {
+                transform: scale(0.98);
+                background-color: rgba(var(--fg-rgb), 0.1);
+                border: 1px solid rgba(var(--fg-rgb), 0.5);
+            }
+        }
+    }
+}

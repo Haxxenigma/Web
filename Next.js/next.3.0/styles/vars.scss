@@ -1,0 +1,23 @@
+:root[data-theme='dark'] {
+    --bg: #000;
+    --fg: #fff;
+    --bg-rgb: 0, 0, 0;
+    --fg-rgb: 255, 255, 255;
+    --gray: #bfbfbf;
+    --primary: #a5acff;
+    --primary-rgb: 165, 172, 255;
+}
+
+:root[data-theme='light'] {
+    --bg: #fff;
+    --fg: #000;
+    --bg-rgb: 255, 255, 255;
+    --fg-rgb: 0, 0, 0;
+    --gray: #404040;
+    --primary: rgb(80, 95, 255);
+    --primary-rgb: 80, 95, 255;
+}
+
+:root {
+    --mid: #808080;
+}

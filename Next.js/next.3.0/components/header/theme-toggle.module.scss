@@ -1,0 +1,21 @@
+@import '@/styles/mixins';
+
+.themeToggle {
+    @include flex();
+    padding: 4px;
+    color: var(--gray);
+    background-color: rgba(var(--fg-rgb), 0.1);
+    border: 4px double var(--bg);
+    border-radius: 50%;
+    transition: 0.3s;
+
+    &:hover {
+        color: var(--fg);
+    }
+
+    &:active {
+        transition: 0s;
+        color: var(--fg);
+        background-color: rgba(var(--fg-rgb), 0.2);
+    }
+}

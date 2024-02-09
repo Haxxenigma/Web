@@ -1,0 +1,57 @@
+@import '@/styles/mixins';
+
+.field {
+    margin-top: 16px;
+
+    .label {
+        @include flex(flex-start);
+        position: relative;
+        background-image: linear-gradient(180deg, rgba(var(--fg-rgb), 0.01), rgba(var(--fg-rgb), 0.1));
+        border-radius: 4px;
+        overflow: hidden;
+
+        .icon {
+            @include flex();
+            position: absolute;
+            height: 100%;
+            padding: 10px;
+            color: rgba(var(--fg-rgb), 0.75);
+            border-right: 1px solid rgba(var(--fg-rgb), 0.1);
+            transform: none;
+            transition: 0.3s;
+        }
+
+        .input {
+            width: 100%;
+            padding: 8px;
+            padding-left: 48px;
+            background-color: rgba(var(--fg-rgb), 0.1);
+            transition: 0.3s;
+
+            &::placeholder {
+                color: rgba(var(--fg-rgb), 0.75);
+            }
+
+            &:hover {
+                background-color: rgba(var(--fg-rgb), 0.15);
+            }
+
+            &:focus,
+            &.isNotEmpty {
+                background-color: rgba(var(--fg-rgb), 0.2);
+            }
+
+            &.isNotEmpty {
+                ~.icon {
+                    color: var(--primary);
+                }
+            }
+
+            &.isError {
+                ~.icon {
+                    color: #ff0000;
+                }
+            }
+        }
+    }
+}

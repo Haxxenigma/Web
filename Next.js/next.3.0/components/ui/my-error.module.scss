@@ -1,0 +1,8 @@
+@import '@/styles/mixins';
+
+.error {
+    @include flex(flex-start, $gap: 5px);
+    min-height: 22px;
+    color: #f00;
+    font-size: 14px;
+}

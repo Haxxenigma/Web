@@ -1,0 +1,81 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: none;
+    font-family: inherit;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: inherit;
+    box-sizing: border-box;
+    background-color: transparent;
+    cursor: default;
+}
+
+html,
+body {
+    color: var(--fg);
+    background-color: var(--bg);
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    transition: 0.3s;
+}
+
+a,
+button {
+    cursor: pointer;
+
+    >* {
+        pointer-events: none;
+    }
+}
+
+input[type='text'],
+input[type='password'],
+textarea {
+    cursor: text;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 60px - 60px);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #404040;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: #808080;
+    }
+
+    &:active {
+        background-color: #bfbfbf;
+    }
+}
+
+::-webkit-scrollbar-corner {
+    background-color: var(--bg);
+}
+
+::selection {
+    background-color: var(--fg);
+    color: var(--bg);
+}

@@ -1,0 +1,122 @@
+@import '@/styles/mixins';
+
+.dropdownWrapper {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.dropdownCnt {
+    @include flex();
+    position: relative;
+
+    .dropdownBtn {
+        @include flex(space-between);
+        width: 170px;
+        height: 40px;
+        padding: 0 4px;
+        color: var(--gray);
+        background-color: rgba(var(--fg-rgb), 0.1);
+        border-radius: 8px;
+        transition: 0.3s;
+
+        &:hover {
+            color: var(--fg);
+            background-color: rgba(var(--fg-rgb), 0.15);
+        }
+
+        &:active {
+            transition: 0s;
+            background-color: rgba(var(--fg-rgb), 0.2);
+        }
+
+        .imageCnt {
+            @include flex();
+            width: 35px;
+            height: 35px;
+            min-width: 35px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            .image {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .name {
+            @include flex(flex-start);
+
+            span {
+                max-width: 100px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .arrow {
+            @include flex();
+            transition: 0.1s;
+
+            &.active {
+                rotate: 180deg;
+            }
+        }
+    }
+
+    .dropdown {
+        @include flex($dir: column);
+        position: absolute;
+        width: 200px;
+        top: 120%;
+        right: 0;
+        padding: 4px 0;
+        background-color: rgba(var(--bg-rgb), 0.8);
+        box-shadow: inset 0 0 100px rgba(var(--fg-rgb), 0.2);
+        backdrop-filter: blur(5px);
+        border-radius: 8px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: 0.1s;
+
+        &.active {
+            top: 140%;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+
+        .link {
+            @include flex(flex-start, $gap: 6px);
+            width: 100%;
+            height: 40px;
+            padding: 0 6px;
+            color: var(--gray);
+            transition: 0.3s;
+
+            &:hover {
+                background-color: rgba(var(--fg-rgb), 0.05);
+                color: var(--fg);
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .dropdownCnt .dropdownBtn {
+        justify-content: center;
+        width: 40px;
+        padding: 0;
+
+        .name {
+            display: none;
+        }
+
+        .arrow {
+            display: none;
+        }
+    }
+}
