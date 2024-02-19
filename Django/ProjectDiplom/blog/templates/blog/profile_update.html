@@ -1,51 +1,51 @@
-{% extends "blog/base.html" %}
+{% extends 'blog/base.html' %}
 {% block title %}Profile settings{% endblock %}
 {% block content %}
 {% load static %}
-<div class="cnt_btns">
-    <a href="../" title="Back">Back</a>
+<div class='cnt_btns'>
+    <a href='../' title='Back'>Back</a>
 </div>
-<div class="cnt_h">
+<div class='cnt_h'>
     <h1>Profile settings</h1>
 </div>
-<div class="cnt profile_update">
-    <form method="post" enctype="multipart/form-data" class="form">
+<div class='cnt profile_update'>
+    <form method='post' enctype='multipart/form-data' class='form'>
         {% csrf_token %}
-        <div class="form_input">
-            <label for="id_username">Username:</label>
-            <input type="text" name="username" value="{{ user }}" maxlength="40" required id="id_username" />
+        <div class='form_input'>
+            <label for='id_username'>Username:</label>
+            <input type='text' name='username' value='{{ user }}' maxlength='40' required id='id_username' />
         </div>
-        <div class="form_input">
-            <label for="id_email">Email address:</label>
-            <input type="email" name="email" value="{% if user.email %}{{ user.email }}{% endif %}" maxlength="254"
-                id="id_email" />
+        <div class='form_input'>
+            <label for='id_email'>Email address:</label>
+            <input type='email' name='email' value='{% if user.email %}{{ user.email }}{% endif %}' maxlength='254'
+                id='id_email' />
         </div>
-        <div class="form_input">
-            <label for="id_birth_date">Birth date:</label>
-            <input type="text" name="birth_date" id="id_birth_date" placeholder="YYYY-MM-DD"
-                value="{% if user.birth_date %}{{ user.birth_date|date:'Y-m-d' }}{% endif %}" />
+        <div class='form_input'>
+            <label for='id_birth_date'>Birth date:</label>
+            <input type='text' name='birth_date' id='id_birth_date' placeholder='YYYY-MM-DD'
+                value='{% if user.birth_date %}{{ user.birth_date|date:' Y-m-d' }}{% endif %}' />
         </div>
-        <div class="form_input">
-            <label for="id_avatar">Avatar:</label>
-            <input type="file" name="avatar" accept="image/*" id="id_avatar" />
+        <div class='form_input'>
+            <label for='id_avatar'>Avatar:</label>
+            <input type='file' name='avatar' accept='image/*' id='id_avatar' />
         </div>
-        <div class="form_input">
-            <label for="avatar-clear_id">Clear currently avatar?</label>
-            <input type="checkbox" name="avatar-clear" id="avatar-clear_id" />
-            <a href="{% if user.avatar %}{{ user.avatar.url }}{% else %}{% static 'blog/media/avatar.svg' %}{% endif %}"
-                title="{{ user.avatar }}">
-                <img src="{% if user.avatar %}{{ user.avatar.url }}{% else %}{% static 'blog/media/avatar.svg' %}{% endif %}"
-                    alt="avatar" class="profile_update_ava" /></a>
+        <div class='form_input'>
+            <label for='avatar-clear_id'>Clear currently avatar?</label>
+            <input type='checkbox' name='avatar-clear' id='avatar-clear_id' />
+            <a href='{% if user.avatar %}{{ user.avatar.url }}{% else %}{% static "blog/media/avatar.svg" %}{% endif %}'
+                title='{{ user.avatar }}'>
+                <img src='{% if user.avatar %}{{ user.avatar.url }}{% else %}{% static "blog/media/avatar.svg" %}{% endif %}'
+                    alt='avatar' class='profile_update_ava' /></a>
         </div>
-        <div class="form_input">
+        <div class='form_input'>
             <label>Password:</label>
-            <a href="../../1/password/" title="Change password" class="profile_update_pass">Change password</a>
+            <a href='../../1/password/' title='Change password' class='profile_update_pass'>Change password</a>
         </div>
-        <div class="form_btns">
-            <button type="submit">Save</button>
+        <div class='form_btns'>
+            <button type='submit'>Save</button>
         </div>
         {% if form.errors %}
-        <div class="alerts">
+        <div class='alerts'>
             <strong>Error:</strong>
             <ul>
                 {% for field, error_list in form.errors.items %}

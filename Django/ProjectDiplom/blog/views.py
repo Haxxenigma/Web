@@ -1,7 +1,5 @@
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
-from django.forms.models import BaseModelForm
-from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.urls import reverse
@@ -14,9 +12,8 @@ from django.views.generic import (
 )
 from ProjectDiplom.settings import MEDIA_ROOT
 from .forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import User, Profile, Article
+from .models import Profile, Article
 from django.db.models import Q
-from PIL import Image
 import os
 
 

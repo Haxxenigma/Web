@@ -1,37 +1,37 @@
-{% extends "blog/base.html" %}
+{% extends 'blog/base.html' %}
 {% block title %}{{ article.title }}{% endblock %}
 {% load static %}
 {% block content %}
-<div class="cnt_btns">
-    <a href="../../" title="Back">Back</a>
+<div class='cnt_btns'>
+    <a href='../../' title='Back'>Back</a>
     {% if user == article.author %}
-    <a href="{% url 'article_update' article.pk %}" title="Edit">Edit</a>
-    <a href="{% url 'article_delete' article.pk %}" title="Delete">Delete</a>
+    <a href='{% url "article_update" article.pk %}' title='Edit'>Edit</a>
+    <a href='{% url "article_delete" article.pk %}' title='Delete'>Delete</a>
     {% endif %}
 </div>
-<div class="cnt_h">
+<div class='cnt_h'>
     <h1>{{ article.title }}</h1>
 </div>
-<div class="cnt article_detail">
-    <a href="/{{ article.author }}" title="{{ article.author }}" class="article_author">
-        <div class="author_avatar">
-            <img src="{% if article.author.avatar %}{{ article.author.avatar.url }}{% else %}{% static 'blog/media/avatar.svg' %}{% endif %}"
-                alt="avatar" />
+<div class='cnt article_detail'>
+    <a href='/{{ article.author }}' title='{{ article.author }}' class='article_author'>
+        <div class='author_avatar'>
+            <img src='{% if article.author.avatar %}{{ article.author.avatar.url }}{% else %}{% static "blog/media/avatar.svg" %}{% endif %}'
+                alt='avatar' />
         </div>{{ article.author }}
     </a>
-    <div class="article_date">
-        <div class="date_logo">
-            <img src="{% static 'blog/media/date.svg' %}" alt="date_logo" />
+    <div class='article_date'>
+        <div class='date_logo'>
+            <img src='{% static "blog/media/date.svg" %}' alt='date_logo' />
         </div>{{ article.created_at }}
     </div>
-    <div class="article_preview">
-        <img src="{% if article.preview %}{{ article.preview.url }}{% else %}{% static 'blog/media/preview.jpg' %}{% endif %}"
-            alt="preview" onclick="window.open(this.src)" />
+    <div class='article_preview'>
+        <img src='{% if article.preview %}{{ article.preview.url }}{% else %}{% static "blog/media/preview.jpg" %}{% endif %}'
+            alt='preview' onclick='window.open(this.src)' />
     </div>
-    <div class="article_cnt_headers">
-        <ol id="article_cnt_headers_ol">
+    <div class='article_cnt_headers'>
+        <ol id='article_cnt_headers_ol'>
         </ol>
     </div>
-    <div class="article_cnt">{{ article.md_content | safe }}</div>
+    <div class='article_cnt'>{{ article.md_content | safe }}</div>
 </div>
 {% endblock %}

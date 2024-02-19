@@ -1,49 +1,49 @@
 {% extends 'blog/base.html' %}
 {% block title %}Register{% endblock %}
 {% block content %}
-<div class="cnt_btns">
-    <a href="/">Back</a>
+<div class='cnt_btns'>
+    <a href='/'>Back</a>
     <div>
         Already have an account?
-        <a href="../login">Log In</a>
+        <a href='../login'>Log In</a>
     </div>
 </div>
-<div class="cnt_h">
+<div class='cnt_h'>
     <h1>Register</h1>
 </div>
-<div class="cnt register">
-    <form method="post" enctype="multipart/form-data" class="form">
+<div class='cnt register'>
+    <form method='post' enctype='multipart/form-data' class='form'>
         {% csrf_token %}
-        <div class="form_input">
-            <label for="id_username" class="required_label">Username:</label>
-            <input type="text" name="username" maxlength="40" autofocus required id="id_username" />
+        <div class='form_input'>
+            <label for='id_username' class='required_label'>Username:</label>
+            <input type='text' name='username' maxlength='40' autofocus required id='id_username' />
         </div>
-        <div class="form_input">
-            <label for="id_email">Email:</label>
-            <input type="email" name="email" maxlength="254" id="id_email" />
+        <div class='form_input'>
+            <label for='id_email'>Email:</label>
+            <input type='email' name='email' maxlength='254' id='id_email' />
         </div>
-        <div class="form_input">
-            <label for="id_password1" class="required_label">Password:</label>
-            <input type="password" name="password1" autocomplete="new-password" required id="id_password1"
-                aria-autocomplete="list" />
+        <div class='form_input'>
+            <label for='id_password1' class='required_label'>Password:</label>
+            <input type='password' name='password1' autocomplete='new-password' required id='id_password1'
+                aria-autocomplete='list' />
         </div>
-        <div class="form_input">
-            <label for="id_password2" class="required_label">Password confirmation:</label>
-            <input type="password" name="password2" autocomplete="new-password" required id="id_password2" />
+        <div class='form_input'>
+            <label for='id_password2' class='required_label'>Password confirmation:</label>
+            <input type='password' name='password2' autocomplete='new-password' required id='id_password2' />
         </div>
-        <div class="form_input">
-            <label for="id_birth_date">Birth date:</label>
-            <input type="text" name="birth_date" id="id_birth_date" placeholder="YYYY-MM-DD" />
+        <div class='form_input'>
+            <label for='id_birth_date'>Birth date:</label>
+            <input type='text' name='birth_date' id='id_birth_date' placeholder='YYYY-MM-DD' />
         </div>
-        <div class="form_input">
-            <label for="id_avatar">Avatar:</label>
-            <input type="file" name="avatar" accept="image/*" id="id_avatar" />
+        <div class='form_input'>
+            <label for='id_avatar'>Avatar:</label>
+            <input type='file' name='avatar' accept='image/*' id='id_avatar' />
         </div>
-        <div class="form_btns">
-            <button type="submit">Register</button>
+        <div class='form_btns'>
+            <button type='submit'>Register</button>
         </div>
         {% if form.errors %}
-        <div class="alerts">
+        <div class='alerts'>
             <strong>Error:</strong>
             <ul>
                 {% for field, error_list in form.errors.items %}

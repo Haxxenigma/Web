@@ -1,18 +1,18 @@
-{% extends "blog/base.html" %}
+{% extends 'blog/base.html' %}
 {% block title %}Confirmation of article deletion{% endblock %}
 {% block content %}
-<div class="cnt_btns">
-    <a href="{% url 'article_detail' article.pk %}" title="Cancel">Cancel</a>
+<div class='cnt_btns'>
+    <a href='{% url "article_detail" article.pk %}' title='Cancel'>Cancel</a>
 </div>
-<div class="cnt_h">
+<div class='cnt_h'>
     <h1>Confirmation of article deletion</h1>
 </div>
-<div class="cnt article_delete">
-    <form method="post" class="form">
+<div class='cnt article_delete'>
+    <form method='post' class='form'>
         {% csrf_token %}
-        <div>Are you sure you want to delete the article "{{ article.title }}"?</div>
-        <div class="form_btns">
-            <button type="submit" id="form_btn_delete">Delete</button>
+        <div>Are you sure you want to delete the article '{{ article.title }}'?</div>
+        <div class='form_btns'>
+            <button type='submit' id='form_btn_delete'>Delete</button>
         </div>
     </form>
 </div>
